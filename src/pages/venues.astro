@@ -206,6 +206,33 @@ const serviceSchema = {
     </div>
   </section>
 
+  <section class="gallery-section">
+    <div class="container">
+      <h2>See our screens in action</h2>
+      <p class="gallery-intro">Our 65-inch 4K displays are installed in high-traffic areas throughout our partner venues.</p>
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="/images/arenas/arena-screen-01.jpg" alt="SDN digital screen in arena lobby" loading="lazy" />
+        </div>
+        <div class="photo-card">
+          <img src="/images/arenas/arena-screen-02.jpg" alt="Digital advertising display near rink entrance" loading="lazy" />
+        </div>
+        <div class="photo-card">
+          <img src="/images/arenas/arena-screen-03.jpg" alt="Arena hallway screen installation" loading="lazy" />
+        </div>
+        <div class="photo-card">
+          <img src="/images/arenas/arena-screen-04.jpg" alt="SDN screen showing sponsor advertisement" loading="lazy" />
+        </div>
+        <div class="photo-card">
+          <img src="/images/arenas/arena-screen-05.jpg" alt="Digital display in arena common area" loading="lazy" />
+        </div>
+        <div class="photo-card">
+          <img src="/images/arenas/arena-screen-06.jpg" alt="Screen placement near rink scheduling board" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta">
     <h2>Apply to join the SDN network</h2>
     <p>If your arena, golf course, or recreation facility is in a Canadian market with strong visitor traffic, we'd like to talk. Complete our partner application and we'll respond within two business days with a preliminary revenue estimate.</p>
@@ -388,8 +415,48 @@ const serviceSchema = {
     font-size: 0.95rem;
   }
 
+  .gallery-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .gallery-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .gallery-intro {
+    text-align: center;
+    color: var(--gray-500);
+    margin-bottom: 2.5rem;
+  }
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .photo-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 768px) {
     .faq-grid {
+      grid-template-columns: 1fr;
+    }
+    .photo-grid {
       grid-template-columns: 1fr;
     }
   }
