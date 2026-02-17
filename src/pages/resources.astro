@@ -75,52 +75,63 @@ const webPageSchema = {
       <div class="guides-category">
         <h3>For advertisers</h3>
         <div class="guides-grid">
-          <div class="guide-card">
+          <a href="/resources/blog/arena-advertising-guide-canada/" class="guide-card">
             <h4>The complete guide to arena advertising in Canada</h4>
             <p>Everything you need to know — formats, demographics, costs, effectiveness, and how to get started.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/golf-course-advertising-guide/" class="guide-card">
             <h4>Golf course advertising: a complete guide</h4>
             <p>How to reach Canada's most affluent audience through golf clubhouse advertising.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/arena-advertising-cost/" class="guide-card">
             <h4>How much does arena advertising cost?</h4>
             <p>Pricing factors, typical ranges, and how to get the best value from your budget.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/dooh-advertising-101/" class="guide-card">
             <h4>DOOH advertising 101</h4>
             <p>What digital out-of-home advertising is, how it's bought, and why it's growing.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/arena-advertising-vs-digital-ads/" class="guide-card">
             <h4>5 reasons arena advertising beats digital ads</h4>
             <p>Why hockey rink advertising outperforms Facebook and Google for local businesses.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/local-advertising-alternatives/" class="guide-card">
             <h4>Local advertising alternatives</h4>
             <p>An honest comparison of every local advertising option available in Canada.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/hockey-arena-demographics/" class="guide-card">
             <h4>Arena demographics: who attends community hockey?</h4>
             <p>Detailed demographic data on the audience inside Canadian community arenas.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/place-based-advertising/" class="guide-card">
             <h4>The rise of place-based advertising</h4>
             <p>Why screens in venues are the fastest-growing segment of Canadian DOOH.</p>
-          </div>
+            <span class="read-link">Read guide</span>
+          </a>
         </div>
+        <p class="view-all"><a href="/resources/blog/">View all articles</a></p>
       </div>
 
       <div class="guides-category">
         <h3>For venue owners</h3>
         <div class="guides-grid">
-          <div class="guide-card">
+          <a href="/resources/blog/arena-revenue-streams/" class="guide-card">
             <h4>How arenas can generate more revenue</h4>
             <p>Practical revenue ideas beyond ice rentals — advertising, events, naming rights, and more.</p>
-          </div>
-          <div class="guide-card">
+            <span class="read-link">Read guide</span>
+          </a>
+          <a href="/resources/blog/golf-course-revenue-ideas/" class="guide-card">
             <h4>Golf course revenue ideas: digital signage edition</h4>
             <p>How digital screens create passive income for golf course clubhouses.</p>
-          </div>
+            <span class="read-link">Read guide</span>
+          </a>
         </div>
       </div>
     </div>
@@ -248,6 +259,17 @@ const webPageSchema = {
     background: var(--white);
     padding: 1.5rem;
     border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  .guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--blue);
   }
   .guide-card h4 {
     margin-bottom: 0.5rem;
@@ -255,8 +277,22 @@ const webPageSchema = {
   }
   .guide-card p {
     color: var(--gray-500);
-    margin: 0;
+    margin: 0 0 1rem 0;
     font-size: 0.9rem;
+    flex-grow: 1;
+  }
+  .read-link {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .view-all {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .view-all a {
+    color: var(--blue);
+    font-weight: 600;
   }
 
   .case-studies-section {

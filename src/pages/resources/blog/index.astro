@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "SDN Blog",
+  "description": "Expert guides, research, and insights on arena advertising, DOOH, and venue revenue strategies in Canada.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  }
+};
+
+const advertiserPosts = [
+  {
+    title: "The complete guide to arena advertising in Canada",
+    excerpt: "Everything you need to know — formats, demographics, costs, effectiveness, and how to get started.",
+    url: "/resources/blog/arena-advertising-guide-canada/",
+    featured: true
+  },
+  {
+    title: "Golf course advertising: a complete guide",
+    excerpt: "How to reach Canada's most affluent audience through golf clubhouse advertising.",
+    url: "/resources/blog/golf-course-advertising-guide/"
+  },
+  {
+    title: "How much does arena advertising cost?",
+    excerpt: "Pricing factors, typical ranges, and how to get the best value from your budget.",
+    url: "/resources/blog/arena-advertising-cost/"
+  },
+  {
+    title: "DOOH advertising 101",
+    excerpt: "What digital out-of-home advertising is, how it's bought, and why it's growing.",
+    url: "/resources/blog/dooh-advertising-101/"
+  },
+  {
+    title: "5 reasons arena advertising beats digital ads",
+    excerpt: "Why hockey rink advertising outperforms Facebook and Google for local businesses.",
+    url: "/resources/blog/arena-advertising-vs-digital-ads/"
+  },
+  {
+    title: "Local advertising alternatives",
+    excerpt: "An honest comparison of every local advertising option available in Canada.",
+    url: "/resources/blog/local-advertising-alternatives/"
+  },
+  {
+    title: "Arena demographics: who attends community hockey?",
+    excerpt: "Detailed demographic data on the audience inside Canadian community arenas.",
+    url: "/resources/blog/hockey-arena-demographics/"
+  },
+  {
+    title: "The rise of place-based advertising",
+    excerpt: "Why screens in venues are the fastest-growing segment of Canadian DOOH.",
+    url: "/resources/blog/place-based-advertising/"
+  }
+];
+
+const venuePosts = [
+  {
+    title: "How arenas can generate more revenue",
+    excerpt: "Practical revenue ideas beyond ice rentals — advertising, events, naming rights, and more.",
+    url: "/resources/blog/arena-revenue-streams/"
+  },
+  {
+    title: "Golf course revenue ideas: digital signage edition",
+    excerpt: "How digital screens create passive income for golf course clubhouses.",
+    url: "/resources/blog/golf-course-revenue-ideas/"
+  }
+];
+---
+
+<BaseLayout
+  title="Arena Advertising Blog | Guides & Insights | SDN"
+  description="Expert guides, research, and insights on arena advertising, DOOH, and venue revenue strategies in Canada. Updated for 2026."
+  canonicalPath="/resources/blog/"
+  schema={webPageSchema}
+>
+  <section class="page-hero">
+    <h1>Blog</h1>
+    <p>Expert guides and insights on arena advertising, DOOH, and venue revenue</p>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">In-depth articles to help advertisers evaluate arena and venue advertising, and venue owners maximize their facilities' revenue potential.</p>
+    </div>
+  </section>
+
+  <section class="posts-section">
+    <div class="container">
+      <h2>For advertisers</h2>
+      <div class="posts-grid">
+        {advertiserPosts.map((post) => (
+          <a href={post.url} class={`post-card ${post.featured ? 'featured' : ''}`}>
+            {post.featured && <span class="featured-badge">Featured guide</span>}
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+            <span class="read-more">Read article</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="posts-section venues">
+    <div class="container">
+      <h2>For venue owners</h2>
+      <div class="posts-grid">
+        {venuePosts.map((post) => (
+          <a href={post.url} class="post-card">
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+            <span class="read-more">Read article</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Have questions?</h2>
+    <p>Our team is happy to discuss your specific situation — whether you're considering arena advertising or exploring a venue partnership.</p>
+    <a href="/contact/" class="btn-white">Contact us</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 800px;
+    color: var(--gray-600, #495057);
+  }
+
+  .posts-section {
+    padding: 5rem 1.5rem;
+  }
+  .posts-section.venues {
+    background: var(--gray-100);
+  }
+  .posts-section h2 {
+    margin-bottom: 2rem;
+    color: var(--blue);
+  }
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .post-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200, #e9ecef);
+    display: flex;
+    flex-direction: column;
+  }
+  .posts-section.venues .post-card {
+    border: none;
+  }
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: var(--blue);
+  }
+  .post-card.featured {
+    grid-column: span 2;
+    background: linear-gradient(135deg, var(--black) 0%, #1a2a3a 100%);
+    color: var(--white);
+    border: none;
+  }
+  .post-card.featured:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  .featured-badge {
+    display: inline-block;
+    background: var(--blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: fit-content;
+  }
+  .post-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .post-card p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  .post-card.featured p {
+    color: rgba(255,255,255,0.8);
+  }
+  .read-more {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .post-card.featured .read-more {
+    color: var(--white);
+  }
+
+  @media (max-width: 768px) {
+    .post-card.featured {
+      grid-column: span 1;
+    }
+  }
+</style>
