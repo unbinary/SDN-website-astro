@@ -29,6 +29,42 @@ const serviceSchema = {
     <p>Arena advertising through Sports Digital Network puts your brand on large-format digital screens inside Canada's busiest community sports venues — hockey arenas, golf course clubhouses, recreation centres, and indoor soccer facilities.</p>
   </section>
 
+  <section class="audience-selector">
+    <div class="container">
+      <p class="selector-intro">What type of advertiser are you?</p>
+      <div class="selector-cards">
+        <a href="/advertisers/local/" class="selector-card">
+          <div class="selector-icon">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h2>Local business</h2>
+          <p>Target your community with ads in nearby arenas and venues. Perfect for restaurants, retailers, service providers, and franchisees.</p>
+          <span class="selector-cta">Explore local advertising <span class="arrow">&#8594;</span></span>
+        </a>
+
+        <div class="selector-divider">
+          <span>or</span>
+        </div>
+
+        <a href="/advertisers/national/" class="selector-card">
+          <div class="selector-icon">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h2>National brand</h2>
+          <p>Reach 3.6M Canadians weekly across 100+ venues coast-to-coast. Ideal for brand campaigns, product launches, and agency buys.</p>
+          <span class="selector-cta">Explore national reach <span class="arrow">&#8594;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="intro-section">
     <div class="container">
       <p class="lead">Unlike billboards or transit ads, our audience isn't passing by. They're sitting down, watching the game, waiting for a tee time, or cheering from the stands. And they're there for over an hour.</p>
@@ -229,6 +265,90 @@ const serviceSchema = {
 </BaseLayout>
 
 <style>
+  .audience-selector {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, var(--black) 0%, #1a2a3a 100%);
+  }
+  .selector-intro {
+    text-align: center;
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  .selector-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .selector-card {
+    flex: 1;
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+  }
+  .selector-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-color: var(--blue);
+  }
+  .selector-icon {
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+  }
+  .selector-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .selector-card p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .selector-cta {
+    display: inline-block;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .selector-cta .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  .selector-card:hover .selector-cta .arrow {
+    transform: translateX(5px);
+  }
+  .selector-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--blue);
+    border-radius: 50%;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .selector-cards {
+      flex-direction: column;
+    }
+    .selector-divider {
+      margin: 0.5rem 0;
+    }
+  }
+
   .intro-section {
     padding: 4rem 1.5rem;
     background: var(--gray-100);
