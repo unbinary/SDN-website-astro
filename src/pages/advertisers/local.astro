@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Local DOOH Advertising",
+  "provider": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  },
+  "description": "Hyper-local digital advertising in community arenas and recreation facilities. Perfect for local businesses targeting their immediate community.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": "Local Digital Out-of-Home Advertising"
+};
+---
+
+<BaseLayout
+  title="Local Advertising - Sports Digital Network"
+  description="Reach your local community at the arena, recreation center, or golf course. Affordable DOOH advertising for local businesses across Canada."
+  canonicalPath="/advertisers/local/"
+  schema={serviceSchema}
+>
+  <section class="page-hero">
+    <h1>Local advertising</h1>
+    <p>Connect with your community where they gather</p>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Your neighbors are watching</h2>
+      <p>Local businesses thrive on community connection. SDN puts your message in front of families right in your backyard - at the hockey rink, the community center, the local golf course.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Hyper-local targeting</h3>
+          <p>Select specific venues in your community. Advertise at the arena two blocks from your store, or the golf course where your customers play.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Affordable entry point</h3>
+          <p>Start with a single venue and expand as you see results. Local advertising that fits local budgets.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Community credibility</h3>
+          <p>Being seen at local venues builds trust. You're not just an advertiser - you're a community supporter.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Captive attention</h3>
+          <p>Parents at hockey practice, golfers waiting to tee off - your audience is present and engaged for extended periods.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Perfect for local businesses</h3>
+        <ul>
+          <li>Restaurants and QSRs near venues</li>
+          <li>Local retail and service businesses</li>
+          <li>Real estate agents targeting neighborhoods</li>
+          <li>Healthcare providers serving families</li>
+          <li>Auto dealers and service centers</li>
+          <li>Local franchises building awareness</li>
+        </ul>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-number">90</span>
+          <span class="stat-label">minutes average dwell time</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">3-5x</span>
+          <span class="stat-label">weekly repeat exposure</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">local audience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to reach your neighbors?</h2>
+    <p>Tell us about your business and we'll find the right venues for you</p>
+    <a href="/contact" class="btn-white">Get started</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .content-section {
+    padding: 4rem 1.5rem;
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .container h2 {
+    margin-bottom: 1rem;
+  }
+  .container > p {
+    font-size: 1.125rem;
+    color: var(--gray-500);
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .feature-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .feature-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+  }
+  .highlight-box h3 {
+    margin-bottom: 1.5rem;
+  }
+  .highlight-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .highlight-box li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .highlight-box li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+  }
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+  }
+  .stat-label {
+    display: block;
+    color: var(--gray-500);
+    margin-top: 0.5rem;
+  }
+</style>

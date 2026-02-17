@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sports Digital Network",
+  "description": "Canada's premium digital out-of-home advertising network with 100+ venues across Ontario, British Columbia, Alberta, and Quebec.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    {"@type": "State", "name": "Ontario"},
+    {"@type": "State", "name": "British Columbia"},
+    {"@type": "State", "name": "Alberta"},
+    {"@type": "State", "name": "Quebec"}
+  ]
+};
+---
+
+<BaseLayout
+  title="Network locations - Sports Digital Network"
+  description="Explore SDN's 100+ venue locations across Canada. Community arenas, recreation centers, and golf courses in Ontario, BC, Alberta, and Quebec."
+  canonicalPath="/network/locations/"
+  schema={localBusinessSchema}
+>
+  <section class="page-hero">
+    <h1>Our network</h1>
+    <p>100+ premium venues across Canada</p>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Where communities gather</h2>
+      <p>SDN operates in the places where Canadians spend quality time with family and friends. Our network spans community arenas, recreation centers, and golf courses in major markets across the country.</p>
+
+      <!-- Map placeholder -->
+      <div class="map-placeholder">
+        <div class="map-inner">
+          <h3>Interactive map coming soon</h3>
+          <p>Explore our venue locations across Canada</p>
+        </div>
+      </div>
+
+      <div class="regions-grid">
+        <div class="region-card">
+          <h3>Ontario</h3>
+          <p class="venue-count">60+ venues</p>
+          <ul>
+            <li>Greater Toronto Area</li>
+            <li>Ottawa - Gatineau</li>
+            <li>Hamilton - Burlington</li>
+            <li>London - Kitchener</li>
+            <li>Niagara Region</li>
+          </ul>
+        </div>
+        <div class="region-card">
+          <h3>British Columbia</h3>
+          <p class="venue-count">15+ venues</p>
+          <ul>
+            <li>Greater Vancouver</li>
+            <li>Fraser Valley</li>
+            <li>Victoria</li>
+            <li>Kelowna - Okanagan</li>
+          </ul>
+        </div>
+        <div class="region-card">
+          <h3>Alberta</h3>
+          <p class="venue-count">15+ venues</p>
+          <ul>
+            <li>Calgary</li>
+            <li>Edmonton</li>
+            <li>Red Deer</li>
+            <li>Lethbridge</li>
+          </ul>
+        </div>
+        <div class="region-card">
+          <h3>Quebec</h3>
+          <p class="venue-count">10+ venues</p>
+          <ul>
+            <li>Montreal</li>
+            <li>Quebec City</li>
+            <li>Laval</li>
+            <li>Gatineau</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="venue-types">
+        <h3>Venue types in our network</h3>
+        <div class="types-grid">
+          <div class="type-item">
+            <span class="type-icon">&#127954;</span>
+            <div>
+              <h4>Community arenas</h4>
+              <p>Hockey rinks and ice facilities across Canada</p>
+            </div>
+          </div>
+          <div class="type-item">
+            <span class="type-icon">&#127947;</span>
+            <div>
+              <h4>Recreation centers</h4>
+              <p>Multi-sport facilities serving families</p>
+            </div>
+          </div>
+          <div class="type-item">
+            <span class="type-icon">&#9971;</span>
+            <div>
+              <h4>Golf courses</h4>
+              <p>Clubhouses and pro shops</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Want to advertise in specific markets?</h2>
+    <p>Tell us your target geography and we'll show you available venues</p>
+    <a href="/contact" class="btn-white">Get venue list</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .content-section {
+    padding: 4rem 1.5rem;
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .container h2 {
+    margin-bottom: 1rem;
+  }
+  .container > p {
+    font-size: 1.125rem;
+    color: var(--gray-500);
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+  .map-placeholder {
+    background: var(--gray-100);
+    border-radius: 8px;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    border: 2px dashed var(--gray-300, #dee2e6);
+  }
+  .map-inner h3 {
+    margin-bottom: 0.5rem;
+    color: var(--gray-500);
+  }
+  .map-inner p {
+    margin: 0;
+    color: var(--gray-400, #adb5bd);
+  }
+  .regions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .region-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200, #e9ecef);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  .region-card h3 {
+    margin: 0 0 0.5rem 0;
+  }
+  .venue-count {
+    color: var(--blue);
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+  }
+  .region-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .region-card li {
+    padding: 0.25rem 0;
+    color: var(--gray-500);
+    font-size: 0.9rem;
+  }
+  .venue-types {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+  }
+  .venue-types h3 {
+    margin-bottom: 2rem;
+  }
+  .types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .type-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .type-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .type-item h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.125rem;
+  }
+  .type-item p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+</style>

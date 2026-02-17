@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Golf Course Digital Advertising Partnership",
+  "provider": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  },
+  "description": "Revenue-generating digital display partnership for golf courses, clubhouses, and pro shops across Canada.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": "Digital Display Partnership"
+};
+---
+
+<BaseLayout
+  title="Golf course partnerships - Sports Digital Network"
+  description="Generate new revenue for your golf course with SDN's digital display network. Premium advertising for clubhouses, pro shops, and course facilities."
+  canonicalPath="/venues/golf/"
+  schema={serviceSchema}
+>
+  <section class="page-hero">
+    <h1>Golf course partnerships</h1>
+    <p>Premium advertising for premium venues</p>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Elevate your clubhouse experience</h2>
+      <p>Golf courses attract an affluent, engaged audience that brands want to reach. SDN brings premium digital advertising to your facility - generating revenue while enhancing the member experience.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Premium brand partners</h3>
+          <p>Golf-appropriate advertisers only. Luxury brands, financial services, automotive, and lifestyle companies that resonate with your members.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Revenue without effort</h3>
+          <p>We handle installation, sales, content management, and maintenance. You receive monthly revenue payments.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Enhance, don't distract</h3>
+          <p>Sleek digital displays that complement your facility's aesthetics. Professional content that adds to the atmosphere.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Your content included</h3>
+          <p>Display tee times, tournament info, course conditions, and club announcements on the same screens.</p>
+        </div>
+      </div>
+
+      <div class="placement-section">
+        <h3>Strategic placements</h3>
+        <div class="placements-grid">
+          <div class="placement">
+            <h4>Clubhouse lounge</h4>
+            <p>Reach golfers before and after their rounds in a relaxed, receptive environment.</p>
+          </div>
+          <div class="placement">
+            <h4>Pro shop</h4>
+            <p>Influence purchasing decisions at the point of sale with targeted brand messaging.</p>
+          </div>
+          <div class="placement">
+            <h4>Restaurant and bar</h4>
+            <p>Extended dwell time means extended brand exposure during the 19th hole.</p>
+          </div>
+          <div class="placement">
+            <h4>Practice facilities</h4>
+            <p>Capture attention during warmup sessions and driving range time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>The golf audience advantage</h3>
+        <ul>
+          <li>Higher household income demographic</li>
+          <li>Business decision-makers</li>
+          <li>Extended time on-site (4+ hours)</li>
+          <li>Repeat weekly visitation</li>
+          <li>Receptive to premium brands</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Explore a partnership</h2>
+    <p>See how SDN can benefit your golf facility</p>
+    <a href="/contact" class="btn-white">Contact us</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .content-section {
+    padding: 4rem 1.5rem;
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .container h2 {
+    margin-bottom: 1rem;
+  }
+  .container > p {
+    font-size: 1.125rem;
+    color: var(--gray-500);
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .feature-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .feature-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+  .placement-section {
+    margin-bottom: 3rem;
+  }
+  .placement-section h3 {
+    margin-bottom: 2rem;
+  }
+  .placements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .placement {
+    border-left: 3px solid var(--blue);
+    padding-left: 1.5rem;
+  }
+  .placement h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.125rem;
+  }
+  .placement p {
+    margin: 0;
+    color: var(--gray-500);
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+  }
+  .highlight-box h3 {
+    margin-bottom: 1.5rem;
+  }
+  .highlight-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .highlight-box li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .highlight-box li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+  }
+</style>

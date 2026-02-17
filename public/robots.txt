@@ -1,0 +1,16 @@
+# Robots.txt for Sports Digital Network
+# https://sdnetwork.ca
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://sdnetwork.ca/sitemap-index.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block common non-content paths
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /admin/

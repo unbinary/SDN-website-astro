@@ -1,12 +1,5 @@
 ---
-// Navigation component - edit once, updates everywhere
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/advertisers', label: 'Advertisers' },
-  { href: '/venues', label: 'Venues' },
-  { href: '/resources', label: 'Resources' },
-];
+// Navigation component with dropdown menus
 ---
 
 <nav>
@@ -20,13 +13,90 @@ const navLinks = [
       <span></span>
     </button>
     <ul class="nav-links">
-      {navLinks.map(link => (
-        <li><a href={link.href}>{link.label}</a></li>
-      ))}
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li class="has-dropdown">
+        <a href="/advertisers">Advertisers</a>
+        <ul class="dropdown">
+          <li><a href="/advertisers">Overview</a></li>
+          <li><a href="/advertisers/national">National brands</a></li>
+          <li><a href="/advertisers/local">Local businesses</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="/venues">Venues</a>
+        <ul class="dropdown">
+          <li><a href="/venues">Overview</a></li>
+          <li><a href="/venues/arenas">Arenas</a></li>
+          <li><a href="/venues/golf">Golf courses</a></li>
+        </ul>
+      </li>
+      <li><a href="/network/locations">Locations</a></li>
+      <li><a href="/resources">Resources</a></li>
       <li><a href="/contact" class="btn-nav">Contact</a></li>
     </ul>
   </div>
 </nav>
+
+<style>
+  .has-dropdown {
+    position: relative;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    list-style: none;
+    margin: 0;
+  }
+  .dropdown li {
+    margin: 0;
+  }
+  .dropdown a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--black);
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  .dropdown a:hover {
+    background: var(--gray-100);
+    color: var(--blue);
+  }
+  .has-dropdown:hover .dropdown {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .dropdown {
+      position: static;
+      box-shadow: none;
+      background: transparent;
+      padding-left: 1rem;
+      display: none;
+    }
+    .has-dropdown.active .dropdown {
+      display: block;
+    }
+    .dropdown a {
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    .dropdown a:hover {
+      background: transparent;
+      opacity: 1;
+    }
+  }
+</style>
 
 <script>
   // Mobile menu toggle
@@ -38,8 +108,18 @@ const navLinks = [
     navLinks?.classList.toggle('active');
   });
 
-  // Close on link click
-  document.querySelectorAll('.nav-links a').forEach(link => {
+  // Mobile dropdown toggle
+  document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        link.parentElement?.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close on non-dropdown link click
+  document.querySelectorAll('.nav-links > li:not(.has-dropdown) > a, .dropdown a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenuBtn?.classList.remove('active');
       navLinks?.classList.remove('active');

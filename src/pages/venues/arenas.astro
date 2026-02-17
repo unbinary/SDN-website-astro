@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Arena Digital Advertising Partnership",
+  "provider": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  },
+  "description": "Revenue-generating digital display partnership for community arenas and ice rinks across Canada.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": "Digital Display Partnership"
+};
+---
+
+<BaseLayout
+  title="Arena partnerships - Sports Digital Network"
+  description="Generate new revenue for your arena with SDN's digital display network. Free installation, premium content, and passive income for community rinks."
+  canonicalPath="/venues/arenas/"
+  schema={serviceSchema}
+>
+  <section class="page-hero">
+    <h1>Arena partnerships</h1>
+    <p>Turn your arena's visibility into revenue</p>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>A better revenue model for community arenas</h2>
+      <p>Traditional arena advertising is a headache - selling local ads, managing relationships, changing static banners. SDN handles everything while you focus on what matters: serving your community.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Zero cost installation</h3>
+          <p>We provide and install premium digital displays at no cost to your facility. Professional installation, ongoing maintenance included.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Passive revenue stream</h3>
+          <p>Earn monthly revenue without lifting a finger. We sell the ads, manage the content, and send you a check.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Community-appropriate content</h3>
+          <p>All advertising is family-friendly and vetted for community venues. Your reputation is protected.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Your content too</h3>
+          <p>Display your own announcements, schedules, and community messages alongside premium advertising.</p>
+        </div>
+      </div>
+
+      <div class="process-section">
+        <h3>How it works</h3>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-number">1</span>
+            <div>
+              <h4>Site assessment</h4>
+              <p>We evaluate your facility and identify optimal display locations for maximum visibility.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-number">2</span>
+            <div>
+              <h4>Free installation</h4>
+              <p>Our team installs commercial-grade digital displays at no cost to you.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-number">3</span>
+            <div>
+              <h4>We sell, you earn</h4>
+              <p>SDN fills the screens with premium advertisers. You receive monthly revenue payments.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-number">4</span>
+            <div>
+              <h4>Ongoing support</h4>
+              <p>We handle all maintenance, content management, and advertiser relationships.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Ideal venues</h3>
+        <ul>
+          <li>Municipal arenas and ice rinks</li>
+          <li>Multi-pad arena complexes</li>
+          <li>Community recreation centers</li>
+          <li>Private hockey facilities</li>
+          <li>Tournament and event venues</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Interested in a partnership?</h2>
+    <p>Let's discuss how SDN can work for your facility</p>
+    <a href="/contact" class="btn-white">Contact us</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .content-section {
+    padding: 4rem 1.5rem;
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .container h2 {
+    margin-bottom: 1rem;
+  }
+  .container > p {
+    font-size: 1.125rem;
+    color: var(--gray-500);
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .feature-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .feature-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+  .process-section {
+    margin-bottom: 3rem;
+  }
+  .process-section h3 {
+    margin-bottom: 2rem;
+  }
+  .process-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .process-step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  .process-step h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.125rem;
+  }
+  .process-step p {
+    margin: 0;
+    color: var(--gray-500);
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+  }
+  .highlight-box h3 {
+    margin-bottom: 1.5rem;
+  }
+  .highlight-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+  }
+  .highlight-box li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .highlight-box li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+  }
+</style>

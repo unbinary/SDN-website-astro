@@ -5,26 +5,85 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  schema?: object;
 }
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  ogImage = '/images/og-default.jpg',
+  schema
+} = Astro.props;
+
+const siteUrl = 'https://sdnetwork.ca';
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+
+// Default Organization schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sports Digital Network",
+  "alternateName": "SDN",
+  "url": "https://sdnetwork.ca",
+  "logo": "https://sdnetwork.ca/images/logo-light.png",
+  "description": "Canada's premium digital out-of-home advertising network operating in community arenas, recreation facilities, and golf courses.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-647-405-4988",
+    "contactType": "sales",
+    "email": "info@sdnetwork.ca"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/sportsdigitalnetwork"
+  ]
+};
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
   <title>{title}</title>
   <meta name="description" content={description}>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href={canonicalUrl}>
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalUrl}>
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
-  <meta property="og:type" content="website">
+  <meta property="og:image" content={`${siteUrl}${ogImage}`}>
+  <meta property="og:site_name" content="Sports Digital Network">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content={canonicalUrl}>
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={`${siteUrl}${ogImage}`}>
+
+  <!-- Additional SEO -->
+  <meta name="author" content="Sports Digital Network">
+  <meta name="geo.region" content="CA-ON">
+  <meta name="geo.placename" content="Toronto">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,10 +92,18 @@ const { title, description } = Astro.props;
 
   <!-- Styles -->
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )}
 </head>
 <body>
   <Nav />
-  <slot />
+  <main>
+    <slot />
+  </main>
   <Footer />
 </body>
 </html>
