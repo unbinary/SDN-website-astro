@@ -1,85 +1,370 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sports Digital Network",
+  "url": "https://sdnetwork.ca",
+  "description": "Canada's largest digital out-of-home network in community sports venues.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-647-405-4988",
+    "contactType": "sales",
+    "email": "info@sdnetwork.ca"
+  }
+};
 ---
 
 <BaseLayout
-  title="Contact Us - Sports Digital Network"
-  description="Get in touch with Sports Digital Network. Whether you're interested in advertising, venue partnership, or have questions - we're here to help."
+  title="Contact Sports Digital Network | Get a Proposal | SDN"
+  description="Contact SDN for arena advertising quotes, partnership inquiries, or media kit requests. Toronto-based, serving all of Canada. Response within one business day."
   canonicalPath="/contact/"
+  schema={orgSchema}
 >
   <section class="page-hero">
-    <h1>Let's connect</h1>
-    <p>Ready to reach your community where they actually gather? Let's talk.</p>
+    <h1>Get in touch</h1>
+    <p>Our team responds within one business day</p>
   </section>
 
-  <section class="contact-section">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h2>Get in touch</h2>
-        <p>Whether you're looking to advertise in your local market, expand nationally, or explore partnership opportunities for your venue, we're here to help.</p>
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">Whether you're an advertiser looking for a proposal, a venue interested in partnership, or an agency exploring programmatic DOOH, we'd like to hear from you.</p>
+    </div>
+  </section>
 
-        <div class="contact-method">
-          <div class="contact-icon">&#128222;</div>
-          <div>
-            <h3>Call us</h3>
-            <p><a href="tel:647-405-4988">647-405-4988</a></p>
-          </div>
+  <section class="contact-options">
+    <div class="container">
+      <div class="options-grid">
+        <div class="option-card">
+          <h2>For advertisers</h2>
+          <p>Looking to advertise in arenas, golf courses, or recreation centres? Tell us about your campaign goals and we'll send you a custom proposal with recommended venues, formats, and pricing.</p>
+          <h3>What to include:</h3>
+          <ul>
+            <li>Your business name and industry</li>
+            <li>Target geography (specific city, region, or national)</li>
+            <li>Campaign goals (brand awareness, local promotion, product launch, etc.)</li>
+            <li>Approximate budget range (if known)</li>
+            <li>Preferred timing</li>
+          </ul>
         </div>
 
-        <div class="contact-method">
-          <div class="contact-icon">&#9993;</div>
-          <div>
-            <h3>Email us</h3>
-            <p><a href="mailto:info@sdnetwork.ca">info@sdnetwork.ca</a></p>
-          </div>
+        <div class="option-card">
+          <h2>For venue partners</h2>
+          <p>Interested in adding SDN screens to your arena, golf course, or recreation facility? Complete our partner application for a revenue estimate within two business days.</p>
+          <a href="/venues/apply/" class="btn-primary">Apply to become a partner</a>
         </div>
 
-        <div class="contact-method">
-          <div class="contact-icon">&#128205;</div>
-          <div>
-            <h3>Headquarters</h3>
-            <p>Toronto, Ontario<br>Serving communities across Canada</p>
-          </div>
+        <div class="option-card">
+          <h2>For agencies</h2>
+          <p>If you're a media agency or buying desk looking to include SDN inventory in a DOOH plan, our national sales team can provide rate cards, Deal IDs for programmatic access, and custom proposals.</p>
         </div>
-      </div>
-
-      <div class="contact-form">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="first-name">First name *</label>
-              <input type="text" id="first-name" name="first-name" required>
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last name *</label>
-              <input type="text" id="last-name" name="last-name" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-          <div class="form-group">
-            <label for="interest">I'm interested in... *</label>
-            <select id="interest" name="interest" required>
-              <option value="">Select an option</option>
-              <option value="national-advertising">National advertising</option>
-              <option value="local-advertising">Local advertising</option>
-              <option value="venue-partnership">Venue partnership</option>
-              <option value="other">Other inquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your goals..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Send message</button>
-        </form>
       </div>
     </div>
   </section>
+
+  <section class="form-section">
+    <div class="container">
+      <div class="form-layout">
+        <div class="form-info">
+          <h2>Send us a message</h2>
+          <p>Fill out the form and we'll get back to you within one business day.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <strong>Sports Digital Network</strong>
+              <span>Toronto, ON, Canada</span>
+            </div>
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a href="tel:647-405-4988">647-405-4988</a>
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:info@sdnetwork.ca">info@sdnetwork.ca</a>
+            </div>
+            <div class="contact-item">
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/company/sportsdigitalnetwork" target="_blank" rel="noopener">Sports Digital Network</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First name *</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name *</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company / Organization</label>
+              <input type="text" id="company" name="company" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-type">I'm inquiring about... *</label>
+              <select id="inquiry-type" name="inquiry-type" required>
+                <option value="">Select an option</option>
+                <option value="advertiser-local">Local advertising opportunity</option>
+                <option value="advertiser-national">National advertising campaign</option>
+                <option value="advertiser-programmatic">Programmatic / agency buying</option>
+                <option value="venue-partnership">Venue partnership</option>
+                <option value="media-kit">Media kit request</option>
+                <option value="other">Other inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="target-market">Target market / geography (if advertising)</label>
+              <input type="text" id="target-market" name="target-market" placeholder="e.g., GTA, Ontario, National" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals or questions..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="media-kit-section">
+    <div class="container">
+      <h2>Media kit</h2>
+      <p>Download our media kit for a complete overview of the SDN network — demographics, venue list, creative specs, and rate information.</p>
+      <a href="/resources/media-kit/" class="btn-outline">Download media kit</a>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 800px;
+    color: var(--gray-600, #495057);
+  }
+
+  .contact-options {
+    padding: 5rem 1.5rem;
+  }
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .option-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .option-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  .option-card p {
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+  }
+  .option-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  .option-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .option-card li {
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    position: relative;
+    color: var(--gray-500);
+    font-size: 0.9rem;
+  }
+  .option-card li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+  .btn-primary:hover {
+    background: #2589d0;
+  }
+
+  .form-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .form-info h2 {
+    margin-bottom: 1rem;
+  }
+  .form-info > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .contact-details {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .contact-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .contact-item span,
+  .contact-item a {
+    color: var(--gray-500);
+  }
+  .contact-item a:hover {
+    color: var(--blue);
+  }
+
+  .contact-form {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+  }
+  .hidden {
+    display: none;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-200, #e9ecef);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(46, 163, 242, 0.1);
+  }
+  .btn-submit {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn-submit:hover {
+    background: #2589d0;
+  }
+
+  .media-kit-section {
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .media-kit-section h2 {
+    margin-bottom: 1rem;
+  }
+  .media-kit-section p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover {
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  @media (max-width: 768px) {
+    .form-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

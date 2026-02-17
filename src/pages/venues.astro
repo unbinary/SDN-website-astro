@@ -1,69 +1,396 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Arena & Golf Course Advertising Partnership",
+  "provider": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  },
+  "description": "Turn your arena or golf course into a revenue stream. SDN installs screens, sells ads, and pays you monthly. Zero cost, zero effort.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": "Venue Advertising Partnership"
+};
 ---
 
 <BaseLayout
-  title="Partner Venues - Sports Digital Network"
-  description="Partner with SDN to create new revenue streams for your arena, recreation facility, or golf course with premium digital advertising displays."
+  title="Arena & Golf Course Advertising Partnership | Earn Revenue with SDN"
+  description="Turn your arena or golf course into a revenue stream. SDN installs screens, sells ads, and pays you monthly. Zero cost, zero effort. Apply to join our network."
   canonicalPath="/venues/"
+  schema={serviceSchema}
 >
   <section class="page-hero">
-    <h1>Partner with SDN</h1>
-    <p>Create new revenue streams while enhancing the experience for your community</p>
+    <h1>Turn your venue's foot traffic into monthly revenue</h1>
+    <p>We install the screens. We sell the ads. You get paid every month.</p>
   </section>
 
-  <section class="content">
-    <div class="container" style="max-width: 900px;">
-      <div class="intro-box">
-        <h2>More than a revenue stream</h2>
-        <p>Your facility is already a community hub. Families gather here. Friendships form here. Memories are made here.</p>
-        <p>Partnering with SDN means bringing premium digital displays to your venue - creating new revenue while keeping your facility looking modern and professional. Our screens showcase relevant, community-appropriate content that enhances the atmosphere, not distracts from it.</p>
-        <p><strong>We handle everything:</strong> installation, maintenance, content management, and advertiser relationships. You focus on running your facility. We focus on generating revenue.</p>
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">Your arena, recreation centre, or golf course sees thousands of visitors every week. SDN turns that foot traffic into a new revenue stream — without costing you a dollar or a minute of your staff's time.</p>
+      <p>We install commercial-grade digital screens in your facility, sell the advertising, manage the content, and send you a guaranteed monthly payment. You get revenue. Your visitors get sports content, weather updates, and community information on professional displays. Your facility looks more modern. And you don't have to do anything.</p>
+      <p><strong>Over 100 venues across Canada already partner with SDN.</strong></p>
+    </div>
+  </section>
+
+  <section class="how-section">
+    <div class="container">
+      <h2>How the partnership works</h2>
+
+      <div class="how-grid">
+        <div class="how-card">
+          <h3>We invest. You earn.</h3>
+          <p><strong>SDN covers 100% of the cost.</strong> We purchase the screens, pay for installation, handle ongoing maintenance, and manage all content and advertising sales. Your facility pays nothing — ever.</p>
+        </div>
+        <div class="how-card">
+          <h3>Guaranteed monthly revenue</h3>
+          <p>Every month, you receive a payment based on our revenue-sharing agreement. The amount depends on your venue's size, visitor traffic, and market. Payments are predictable and guaranteed for the term of the agreement.</p>
+        </div>
+        <div class="how-card">
+          <h3>Your staff does nothing</h3>
+          <p>Our screens are connected to our network and managed remotely. Content updates, ad scheduling, troubleshooting — it's all handled by our team. If a screen ever needs physical service, we send our own technicians.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="values" style="background: var(--gray-100);">
-    <div class="values-container" style="max-width: 1140px;">
-      <h2 class="section-title" style="text-align: center;">Why venues choose SDN</h2>
+  <section class="benefits-section">
+    <div class="container">
+      <h2>What your facility gets</h2>
+
       <div class="benefits-grid">
-        <div class="benefit">
-          <div class="benefit-icon">&#128176;</div>
-          <h3>Guaranteed revenue</h3>
-          <p>Predictable monthly income with no effort required. We manage all sales, content, and advertiser relationships.</p>
+        <div class="benefit-card">
+          <h3>Revenue</h3>
+          <p>A new, passive income stream with zero upfront investment and zero ongoing cost. For multi-pad arenas and busy golf courses, the annual revenue is meaningful — often comparable to a significant sponsorship deal, but with no sales effort on your part.</p>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#127912;</div>
-          <h3>Premium equipment</h3>
-          <p>State-of-the-art displays installed and maintained at no cost to you. We keep your facility looking cutting-edge.</p>
+        <div class="benefit-card">
+          <h3>Modern facility upgrades</h3>
+          <p>Professional 65-inch 4K displays replace outdated bulletin boards and static signage. Visitors and user groups notice the difference immediately. Several of our partner facilities have cited the screens as a factor in improved user satisfaction scores.</p>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#128737;</div>
-          <h3>Content control</h3>
-          <p>Final approval on all advertising. We ensure every ad aligns with your facility's values and community standards.</p>
+        <div class="benefit-card">
+          <h3>Useful content for visitors</h3>
+          <p>Our screens aren't just advertising. They display real-time information that visitors actually want — ice schedules, weather, sports scores, and community event listings. This makes the screens a functional addition to your facility.</p>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#128250;</div>
-          <h3>Community content</h3>
-          <p>Showcase schedules, scores, announcements, and sponsor recognition alongside paid advertising.</p>
+        <div class="benefit-card">
+          <h3>National advertising demand</h3>
+          <p>SDN's relationships with national brands and media agencies mean your facility gets access to advertising demand you could never generate on your own. National campaigns from major brands run on your screens alongside local business advertising.</p>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#128295;</div>
-          <h3>Zero maintenance</h3>
-          <p>We handle all technical support, updates, and repairs. Your staff has nothing to manage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners-section">
+    <div class="container">
+      <h2>Who we partner with</h2>
+
+      <div class="partner-types">
+        <a href="/venues/arenas/" class="partner-card">
+          <h3>Community arenas</h3>
+          <p>Multi-pad hockey arenas and recreation centres are our core venue type. If your facility has 2+ ice pads and serves as a community hub, you're an ideal SDN partner.</p>
+          <p class="partner-note">We currently operate in partnership with Nustadia Recreation and Canlan Sports — Canada's two largest arena operators.</p>
+          <span class="link-text">Learn more about arena partnerships</span>
+        </a>
+
+        <a href="/venues/golf/" class="partner-card">
+          <h3>Golf courses</h3>
+          <p>Private and resort golf courses offer a premium audience environment for our advertisers. ClubLink — Canada's largest owner of private golf courses — is an SDN partner, with screens in 24 Ontario clubhouses.</p>
+          <p class="partner-note">We're expanding our golf network and looking for new course partners.</p>
+          <span class="link-text">Learn more about golf course partnerships</span>
+        </a>
+
+        <div class="partner-card">
+          <h3>Indoor soccer and multi-sport facilities</h3>
+          <p>Large indoor sports facilities with high foot traffic are excellent SDN venues. We operate screens in many of Canada's largest indoor soccer complexes and multi-sport centres.</p>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#128200;</div>
-          <h3>Growing partnership</h3>
-          <p>As our network expands, so does advertiser interest - meaning increasing revenue potential over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="comparison-section">
+    <div class="container">
+      <h2>What makes SDN different from other arena advertising companies</h2>
+      <p>Most arena advertising companies ask you to sell the ad space, manage the relationships, and handle the logistics. SDN is different:</p>
+
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Traditional arena ad company</th>
+              <th>SDN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Who pays for signage?</strong></td>
+              <td>You buy the boards</td>
+              <td>SDN pays for everything</td>
+            </tr>
+            <tr>
+              <td><strong>Who sells the ads?</strong></td>
+              <td>You or a local rep</td>
+              <td>SDN's national sales team</td>
+            </tr>
+            <tr>
+              <td><strong>Who manages content?</strong></td>
+              <td>You or your staff</td>
+              <td>SDN manages remotely</td>
+            </tr>
+            <tr>
+              <td><strong>Revenue model</strong></td>
+              <td>You keep ad revenue minus costs</td>
+              <td>Guaranteed monthly payments</td>
+            </tr>
+            <tr>
+              <td><strong>Advertiser access</strong></td>
+              <td>Local businesses only</td>
+              <td>National brands + local businesses</td>
+            </tr>
+            <tr>
+              <td><strong>Technology</strong></td>
+              <td>Static boards and banners</td>
+              <td>Digital 4K screens, programmatic-ready</td>
+            </tr>
+            <tr>
+              <td><strong>Maintenance</strong></td>
+              <td>Your responsibility</td>
+              <td>SDN handles all service</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What does it cost to join the SDN network?</h3>
+          <p>Nothing. SDN covers all costs — screens, installation, maintenance, content management, and advertising sales. Your facility pays nothing, ever.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How much revenue can I expect?</h3>
+          <p>Revenue depends on your venue's size, visitor traffic, and market. We'll provide a detailed revenue estimate as part of our partnership proposal. Payments are guaranteed monthly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long is the partnership agreement?</h3>
+          <p>Typical agreements are multi-year, which allows us to invest in your facility with confidence. We'll discuss term options during the proposal process.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What do the screens look like?</h3>
+          <p>We install 65-inch commercial-grade 4K displays in professional wall mounts. Placement is determined collaboratively — we identify high-traffic locations and work with your team on final positioning.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What content runs on the screens?</h3>
+          <p>A mix of advertising (approximately 50% of screen time) and useful content — ice schedules, weather, sports scores, community event listings, and facility announcements.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will this conflict with existing sponsorships?</h3>
+          <p>We work around your existing commitments. If you have current sponsors with category exclusivity, we honour those agreements and build our ad sales around them.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need to provide internet connectivity?</h3>
+          <p>Yes. Each screen requires a wired internet connection. If connectivity isn't available in the installation location, we'll work with you to find a solution.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What happens if a screen breaks?</h3>
+          <p>SDN handles all maintenance and replacement at our cost. We monitor screens remotely and dispatch service when needed.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta">
-    <h2>Let's explore partnership</h2>
-    <p>See how SDN can create value for your facility and community</p>
-    <a href="/contact" class="btn-white">Start a conversation</a>
+    <h2>Apply to join the SDN network</h2>
+    <p>If your arena, golf course, or recreation facility is in a Canadian market with strong visitor traffic, we'd like to talk. Complete our partner application and we'll respond within two business days with a preliminary revenue estimate.</p>
+    <a href="/venues/apply/" class="btn-white">Apply to become a partner</a>
   </section>
 </BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .intro-section p {
+    color: var(--gray-600, #495057);
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin-bottom: 1rem;
+  }
+
+  .how-section {
+    padding: 5rem 1.5rem;
+  }
+  .how-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .how-card {
+    padding: 2rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+  }
+  .how-card h3 {
+    margin-bottom: 1rem;
+  }
+  .how-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .benefits-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .benefits-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .benefit-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .benefit-card h3 {
+    margin-bottom: 1rem;
+  }
+  .benefit-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .partners-section {
+    padding: 5rem 1.5rem;
+  }
+  .partners-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .partner-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  .partner-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: box-shadow 0.3s ease;
+  }
+  a.partner-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .partner-card h3 {
+    margin-bottom: 1rem;
+  }
+  .partner-card p {
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+  }
+  .partner-note {
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  .link-text {
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  .comparison-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .comparison-section h2 {
+    margin-bottom: 1rem;
+  }
+  .comparison-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .comparison-table {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200, #e9ecef);
+  }
+  th {
+    background: var(--black);
+    color: var(--white);
+    font-weight: 600;
+  }
+  th:first-child {
+    background: var(--gray-100);
+    color: var(--black);
+  }
+  td:first-child {
+    background: var(--gray-100);
+  }
+
+  .faq-section {
+    padding: 5rem 1.5rem;
+  }
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq-item p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "SDN Media Kit",
+  "description": "Download the SDN media kit — network demographics, venue list, creative specs, and advertising rates for Canada's largest sports venue DOOH network.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  }
+};
+---
+
+<BaseLayout
+  title="SDN Media Kit | Arena & Golf Course Advertising Specs & Rates"
+  description="Download the SDN media kit — network demographics, venue list, creative specs, and advertising rates for Canada's largest sports venue DOOH network."
+  canonicalPath="/resources/media-kit/"
+  schema={webPageSchema}
+>
+  <section class="page-hero">
+    <h1>SDN media kit</h1>
+    <p>Everything you need to evaluate Sports Digital Network as an advertising partner</p>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">Network overview, audience demographics, venue list, creative specifications, and rate information — all in one document.</p>
+    </div>
+  </section>
+
+  <section class="contents-section">
+    <div class="container">
+      <h2>What's in the media kit</h2>
+
+      <div class="contents-grid">
+        <div class="content-card">
+          <h3>Network overview</h3>
+          <p>SDN's national footprint — 100+ venues, 3.6M weekly visitors, 35M weekly impressions, 90+ minute average dwell time. Our venue partner relationships with ClubLink, Canlan Sports, and Nustadia Recreation.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Audience demographics</h3>
+          <p>Detailed profile of who visits our venues — household income, age distribution, family composition, geographic concentration, and spending patterns. Data sourced from venue traffic records and Canadian participation surveys.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Venue list</h3>
+          <p>Complete list of SDN venues by market, with venue type, number of pads/facilities, and weekly visitor estimates. Includes arenas, golf courses, recreation centres, and indoor sport facilities.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Screen placements</h3>
+          <p>Photos and descriptions of typical screen installations — lobbies, spectator areas, hallways, clubhouse lounges. Screen specifications (65-inch 4K commercial-grade displays).</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Advertising formats</h3>
+          <p>Full-screen digital, scheduling screen placements, programmatic DOOH access via Broadsign, direct and PMP deals. Format details for each buying option.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Creative specifications</h3>
+          <p>File formats, dimensions, video requirements, and delivery instructions. Everything your creative team needs to produce ads for SDN screens.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Rate information</h3>
+          <p>Pricing framework for local, regional, and national campaigns. CPM ranges for programmatic buying. Package options and volume discounts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="download-section">
+    <div class="container">
+      <div class="download-box">
+        <h2>Download the media kit</h2>
+        <p>Enter your email to receive the SDN media kit as a PDF. We'll also send you occasional updates on new venues and network expansion — you can unsubscribe at any time.</p>
+
+        <form class="download-form" name="media-kit-download" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="media-kit-download" />
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email address *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company name</label>
+              <input type="text" id="company" name="company" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="role">I am a... *</label>
+            <select id="role" name="role" required>
+              <option value="">Select your role...</option>
+              <option value="advertiser">Advertiser / Brand</option>
+              <option value="agency">Agency / Media buyer</option>
+              <option value="venue">Venue operator</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary">Download media kit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt-section">
+    <div class="container">
+      <h2>Prefer to talk?</h2>
+      <p>If you'd rather discuss your specific needs with our team before reviewing the media kit, we're happy to schedule a call.</p>
+      <div class="contact-options">
+        <a href="/contact/" class="btn-outline">Contact us</a>
+        <div class="contact-direct">
+          <span>Phone: <a href="tel:647-405-4988">647-405-4988</a></span>
+          <span>Email: <a href="mailto:info@sdnetwork.ca">info@sdnetwork.ca</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 800px;
+    color: var(--gray-600, #495057);
+  }
+
+  .contents-section {
+    padding: 5rem 1.5rem;
+  }
+  .contents-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .contents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .content-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--blue);
+  }
+  .content-card h3 {
+    margin-bottom: 1rem;
+  }
+  .content-card p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .download-section {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+  }
+  .download-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .download-box h2 {
+    margin-bottom: 1rem;
+  }
+  .download-box > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .download-form {
+    text-align: left;
+  }
+  .hidden {
+    display: none;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-200, #e9ecef);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(46, 163, 242, 0.1);
+  }
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn-primary:hover {
+    background: #2589d0;
+  }
+
+  .alt-section {
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .alt-section h2 {
+    margin-bottom: 1rem;
+  }
+  .alt-section > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover {
+    background: var(--blue);
+    color: var(--white);
+  }
+  .contact-direct {
+    display: flex;
+    gap: 2rem;
+    color: var(--gray-500);
+  }
+  .contact-direct a {
+    color: var(--blue);
+  }
+
+  @media (max-width: 768px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .download-box {
+      padding: 2rem;
+    }
+    .contact-direct {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

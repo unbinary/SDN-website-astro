@@ -1,0 +1,481 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the minimum budget to get started with arena advertising?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local single-venue campaigns start at modest monthly rates accessible to most small businesses. Contact us for a specific quote based on the venue you're interested in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there setup or production fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Campaign setup, ad design, and creative updates are included in your campaign rate. There are no hidden fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does programmatic DOOH pricing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Programmatic campaigns are priced on a CPM (cost per thousand impressions) basis, similar to other digital media. You set your budget and targeting parameters through your DSP, and our inventory is available alongside other premium DOOH networks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer discounts for non-profits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer reduced rates for registered charities and community organizations. Contact us for details."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Arena Advertising Cost & Rates in Canada | SDN Pricing Guide"
+  description="How much does arena advertising cost? Rates for local and national campaigns in community arenas and golf courses. Transparent pricing. Get a custom quote."
+  canonicalPath="/advertisers/pricing/"
+  schema={faqSchema}
+>
+  <section class="page-hero">
+    <h1>Arena advertising costs: what to expect and how pricing works</h1>
+    <p>A straightforward guide to arena and sports venue advertising pricing in Canada</p>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">If you're researching arena advertising cost for the first time, you've probably noticed that most companies don't publish their rates. We believe transparency builds trust.</p>
+      <p>Here's how arena and sports venue advertising is priced in Canada, what drives the cost, and how to get the most value from your investment.</p>
+    </div>
+  </section>
+
+  <section class="factors-section">
+    <div class="container">
+      <h2>How arena advertising is priced</h2>
+      <p>Arena advertising rates are based on four main factors:</p>
+
+      <div class="factors-grid">
+        <div class="factor-card">
+          <span class="factor-num">1</span>
+          <h3>Market size</h3>
+          <p>Arenas in major metro areas (Toronto, Vancouver, Calgary, Ottawa) command higher rates than arenas in smaller markets. This reflects the larger visitor volumes and higher-value demographics in major centres.</p>
+        </div>
+        <div class="factor-card">
+          <span class="factor-num">2</span>
+          <h3>Number of venues</h3>
+          <p>Multi-venue campaigns receive volume discounts. A single-arena placement costs more per venue than a 10-venue package in the same market.</p>
+        </div>
+        <div class="factor-card">
+          <span class="factor-num">3</span>
+          <h3>Campaign duration</h3>
+          <p>Longer campaigns get better rates. A 52-week annual commitment is significantly more cost-effective on a per-week basis than a 4-week flight.</p>
+        </div>
+        <div class="factor-card">
+          <span class="factor-num">4</span>
+          <h3>Format and placement</h3>
+          <p>Full-screen digital placements on our 65-inch lobby and spectator screens are our premium format. Scheduling screen placements (split-screen) are available at lower rates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rates-section">
+    <div class="container">
+      <h2>Typical rate ranges</h2>
+      <p>While every campaign is custom-quoted based on your specific requirements, here are general ranges to help you budget:</p>
+
+      <div class="rate-cards">
+        <div class="rate-card">
+          <h3>Local campaigns (single venue)</h3>
+          <p class="rate-desc">Designed for small and medium businesses targeting one community. Includes full-screen digital ad placement on lobby/spectator screens.</p>
+          <ul>
+            <li><strong>Entry campaigns:</strong> Starting from low hundreds per month for a single venue in a smaller market</li>
+            <li><strong>Standard campaigns:</strong> Mid-range monthly investment for a single venue in a major market</li>
+            <li><strong>Multi-venue local:</strong> Discounted per-venue rates when booking 3-5 locations in the same region</li>
+          </ul>
+          <p class="rate-note">Local campaigns are billed monthly with a minimum 4-week commitment. We recommend 12+ weeks for optimal brand recall.</p>
+        </div>
+
+        <div class="rate-card">
+          <h3>Regional campaigns (5-20 venues)</h3>
+          <p class="rate-desc">For brands covering a metro area or region. Volume pricing applies.</p>
+          <ul>
+            <li>Per-venue rates decrease meaningfully at 5, 10, and 20 venue thresholds</li>
+            <li>Regional packages available for GTA, Ottawa-Gatineau, Southern Ontario, Western Canada, and Atlantic Canada</li>
+          </ul>
+        </div>
+
+        <div class="rate-card">
+          <h3>National campaigns (20+ venues)</h3>
+          <p class="rate-desc">For brands seeking coast-to-coast reach. Priced on a CPM basis or as a flat monthly network rate.</p>
+          <ul>
+            <li><strong>Programmatic DOOH:</strong> CPM-based pricing through DSPs, competitive with other premium DOOH inventory</li>
+            <li><strong>Direct national:</strong> Custom-quoted based on venue selection, duration, and exclusivity requirements</li>
+            <li><strong>Annual partnerships:</strong> Significant rate reductions for 12-month commitments with category exclusivity</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="included-section">
+    <div class="container">
+      <h2>What's included in the price</h2>
+      <div class="included-grid">
+        <div class="included-item">
+          <strong>Full-screen ad placement</strong>
+          <span>on commercial-grade 65-inch 4K displays</span>
+        </div>
+        <div class="included-item">
+          <strong>Ad design services</strong>
+          <span>at no extra charge (or use your own creative)</span>
+        </div>
+        <div class="included-item">
+          <strong>Campaign management</strong>
+          <span>scheduling, monitoring, and proof-of-play</span>
+        </div>
+        <div class="included-item">
+          <strong>Impression reporting</strong>
+          <span>based on verified venue foot traffic</span>
+        </div>
+        <div class="included-item">
+          <strong>Creative updates</strong>
+          <span>change your ad at any time during your campaign</span>
+        </div>
+        <div class="included-item">
+          <strong>Dedicated account support</strong>
+          <span>from our team</span>
+        </div>
+      </div>
+      <p class="no-fees">There are no hidden fees, no setup charges, and no production costs for standard campaigns.</p>
+    </div>
+  </section>
+
+  <section class="comparison-section">
+    <div class="container">
+      <h2>Cost comparison: arena advertising vs. other media</h2>
+
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3>vs. Digital/social media ads</h3>
+          <p>Social and search ads have rising CPMs and declining attention. The average Facebook ad gets 1.7 seconds of attention. The average SDN venue visitor is exposed to your ad for 90+ minutes over multiple visits. On a cost-per-engaged-minute basis, arena advertising is dramatically more efficient — even before accounting for ad blocking, bot traffic, and banner blindness.</p>
+        </div>
+        <div class="compare-card">
+          <h3>vs. Traditional billboards</h3>
+          <p>A premium billboard in a major Canadian market can run $5,000-$15,000+ per month for a single face with 6 seconds of exposure per passerby. An SDN arena screen delivers more total dwell time, better targeting, and flexible creative — at a comparable or lower price point.</p>
+        </div>
+        <div class="compare-card">
+          <h3>vs. Local print and flyer advertising</h3>
+          <p>Print flyers and community newspaper ads reach a broad but unengaged audience with a single exposure. Arena advertising reaches a verified, high-income local audience with repeated weekly exposure over the full campaign duration.</p>
+        </div>
+        <div class="compare-card">
+          <h3>vs. Local radio</h3>
+          <p>Radio ads are heard once and forgotten. Arena advertising is seen repeatedly, with visual branding that builds recognition. Both reach local audiences, but arena advertising offers the advantage of a captive, engaged environment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="value-section">
+    <div class="container">
+      <h2>Getting the most value from your budget</h2>
+      <div class="value-grid">
+        <div class="value-item">
+          <h3>Run longer campaigns</h3>
+          <p>Arena advertising builds recall through repetition. The families at the rink this week are the same families who'll be there next week. A 12-week campaign delivers meaningfully better results than a 4-week flight.</p>
+        </div>
+        <div class="value-item">
+          <h3>Choose the right venues</h3>
+          <p>One well-chosen arena in your trading area will outperform three arenas across town. Our team can help you identify the venues where your customers spend time.</p>
+        </div>
+        <div class="value-item">
+          <h3>Keep your message simple</h3>
+          <p>Your ad needs to work from across a lobby. Big logo, clear message, obvious call to action. Our design team knows what works on these screens.</p>
+        </div>
+        <div class="value-item">
+          <h3>Add multiple venues strategically</h3>
+          <p>If you serve a whole city, adding a second or third venue in different neighbourhoods multiplies your reach at a discounted per-venue rate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently asked questions about arena advertising costs</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What's the minimum budget to get started?</h3>
+          <p>Local single-venue campaigns start at modest monthly rates accessible to most small businesses. Contact us for a specific quote based on the venue you're interested in.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Are there setup or production fees?</h3>
+          <p>No. Campaign setup, ad design, and creative updates are included in your campaign rate. There are no hidden fees.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How does programmatic DOOH pricing work?</h3>
+          <p>Programmatic campaigns are priced on a CPM (cost per thousand impressions) basis, similar to other digital media. You set your budget and targeting parameters through your DSP, and our inventory is available alongside other premium DOOH networks.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you offer discounts for non-profits?</h3>
+          <p>Yes. We offer reduced rates for registered charities and community organizations. Contact us for details.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I pause my campaign?</h3>
+          <p>Campaigns can be paused for arena-specific off-seasons (e.g., summer for hockey arenas). Year-round venues like multi-sport facilities and golf courses run continuously. Your account manager can help you plan around seasonal availability.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is golf course advertising priced differently?</h3>
+          <p>Golf course placements are priced on the same framework — by market size, number of venues, and campaign duration. The audience demographics at golf courses (particularly private clubs like ClubLink) are among the highest-value in our network.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Get your custom quote</h2>
+    <p>Every campaign is different. Tell us about your goals and we'll send you a detailed proposal with specific pricing for the venues and markets you're interested in. No obligation.</p>
+    <a href="/contact/" class="btn-white">Request a quote</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .intro-section p {
+    color: var(--gray-600, #495057);
+    font-size: 1.1rem;
+    max-width: 900px;
+  }
+
+  .factors-section {
+    padding: 5rem 1.5rem;
+  }
+  .factors-section h2 {
+    margin-bottom: 1rem;
+  }
+  .factors-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .factors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .factor-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+  }
+  .factor-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .factor-card h3 {
+    margin-bottom: 0.75rem;
+  }
+  .factor-card p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .rates-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .rates-section h2 {
+    margin-bottom: 1rem;
+  }
+  .rates-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .rate-cards {
+    display: grid;
+    gap: 2rem;
+  }
+  .rate-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .rate-card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--blue);
+  }
+  .rate-desc {
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+  }
+  .rate-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+  .rate-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--gray-600, #495057);
+  }
+  .rate-card li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+  }
+  .rate-note {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .included-section {
+    padding: 5rem 1.5rem;
+  }
+  .included-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .included-item {
+    padding: 1.5rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+    border-left: 3px solid var(--blue);
+  }
+  .included-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .included-item span {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+  }
+  .no-fees {
+    text-align: center;
+    font-weight: 600;
+    color: var(--black);
+  }
+
+  .comparison-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .comparison-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .compare-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .compare-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .compare-card p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .value-section {
+    padding: 5rem 1.5rem;
+  }
+  .value-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .value-item {
+    text-align: center;
+  }
+  .value-item h3 {
+    margin-bottom: 0.75rem;
+  }
+  .value-item p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .faq-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq-item p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

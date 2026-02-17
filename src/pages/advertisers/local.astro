@@ -4,12 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Local DOOH Advertising",
+  "name": "Local Arena Advertising",
   "provider": {
     "@type": "Organization",
     "name": "Sports Digital Network"
   },
-  "description": "Hyper-local digital advertising in community arenas and recreation facilities. Perfect for local businesses targeting their immediate community.",
+  "description": "Hyper-local digital advertising in community arenas and recreation facilities. Affordable rates for small businesses targeting their immediate community.",
   "areaServed": {
     "@type": "Country",
     "name": "Canada"
@@ -19,157 +19,381 @@ const serviceSchema = {
 ---
 
 <BaseLayout
-  title="Local Advertising - Sports Digital Network"
-  description="Reach your local community at the arena, recreation center, or golf course. Affordable DOOH advertising for local businesses across Canada."
+  title="Local Arena Advertising | Reach Your Community | SDN"
+  description="Advertise at your local hockey arena or rec centre. Affordable rates for small businesses. Reach families in your community every week. Get a quote today."
   canonicalPath="/advertisers/local/"
   schema={serviceSchema}
 >
   <section class="page-hero">
-    <h1>Local advertising</h1>
-    <p>Connect with your community where they gather</p>
+    <h1>Your neighbours spend 90 minutes a week at the arena. They should know your name.</h1>
+    <p>Local arena advertising puts your business in front of the families who live and spend in your community — affordably, repeatedly, and in an environment they trust.</p>
   </section>
 
-  <section class="content-section">
+  <section class="intro-section">
     <div class="container">
-      <h2>Your neighbors are watching</h2>
-      <p>Local businesses thrive on community connection. SDN puts your message in front of families right in your backyard - at the hockey rink, the community center, the local golf course.</p>
+      <p class="lead">If you're a dentist, a restaurant, a real estate agent, an auto repair shop, or any other business that depends on local customers, SDN puts your message in front of the exact households you want.</p>
+      <p>When a parent sits in the stands at their kid's hockey game, they see your ad on our screen — not for a fraction of a second, but for an entire period. And they'll be back next Tuesday, and again on Saturday morning.</p>
+    </div>
+  </section>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Hyper-local targeting</h3>
-          <p>Select specific venues in your community. Advertise at the arena two blocks from your store, or the golf course where your customers play.</p>
+  <section class="comparison-section">
+    <div class="container">
+      <h2>Why local businesses choose arena advertising over digital ads</h2>
+      <p>You've probably spent money on Facebook and Google ads. Maybe you got clicks. But did those clicks turn into customers who live in your area and can actually walk through your door?</p>
+      <p>Arena advertising works differently. The people who see your ad at the community arena live in your community. They drive past your business on the way home. They're exactly the customers you need, and they see your message multiple times a week for months.</p>
+
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Facebook/Google ads</th>
+              <th>SDN arena advertising</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Audience</strong></td>
+              <td>Algorithmically targeted, often irrelevant</td>
+              <td>Verified local residents in your community</td>
+            </tr>
+            <tr>
+              <td><strong>Attention</strong></td>
+              <td>1-2 seconds before scrolling</td>
+              <td>90+ minutes in-venue, repeated weekly</td>
+            </tr>
+            <tr>
+              <td><strong>Trust</strong></td>
+              <td>Ad fatigue, banner blindness</td>
+              <td>Trusted community environment</td>
+            </tr>
+            <tr>
+              <td><strong>Competition</strong></td>
+              <td>Hundreds of ads per session</td>
+              <td>One screen, no clutter</td>
+            </tr>
+            <tr>
+              <td><strong>Fraud</strong></td>
+              <td>Bot traffic, click fraud</td>
+              <td>Real humans in real places</td>
+            </tr>
+            <tr>
+              <td><strong>Cost efficiency</strong></td>
+              <td>Rising CPMs, unpredictable</td>
+              <td>Fixed monthly rate, predictable budget</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-section">
+    <div class="container">
+      <h2>How it works for local businesses</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Pick your arena</h3>
+          <p>Choose the venue closest to your business — or the one your customers' kids play at. We'll show you the weekly foot traffic and demographics for that location.</p>
         </div>
-        <div class="feature-card">
-          <h3>Affordable entry point</h3>
-          <p>Start with a single venue and expand as you see results. Local advertising that fits local budgets.</p>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>We design your ad</h3>
+          <p>No creative agency needed. Our design team will build your ad at no extra charge. Send us your logo, a few key messages, and your contact info. We'll send you a proof within 48 hours.</p>
         </div>
-        <div class="feature-card">
-          <h3>Community credibility</h3>
-          <p>Being seen at local venues builds trust. You're not just an advertiser - you're a community supporter.</p>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Your ad goes live</h3>
+          <p>Your ad runs on our 65-inch 4K screens in the arena lobby, spectator areas, or scheduling displays. Full-screen placement, no competing ads on the same screen.</p>
         </div>
-        <div class="feature-card">
-          <h3>Captive attention</h3>
-          <p>Parents at hockey practice, golfers waiting to tee off - your audience is present and engaged for extended periods.</p>
+        <div class="step">
+          <span class="step-num">4</span>
+          <h3>Customers start calling</h3>
+          <p>Arena visitors see your ad 2-4 times per week. After a few weeks, you're not just a name — you're the business they think of first when they need what you sell.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="highlight-box">
-        <h3>Perfect for local businesses</h3>
-        <ul>
-          <li>Restaurants and QSRs near venues</li>
-          <li>Local retail and service businesses</li>
-          <li>Real estate agents targeting neighborhoods</li>
-          <li>Healthcare providers serving families</li>
-          <li>Auto dealers and service centers</li>
-          <li>Local franchises building awareness</li>
-        </ul>
+  <section class="categories-section">
+    <div class="container">
+      <h2>What types of local businesses advertise with SDN?</h2>
+      <p>Our local advertisers span every service category that depends on community customers:</p>
+      <div class="categories-grid">
+        <div class="category-card">
+          <h3>Healthcare and wellness</h3>
+          <p>Dental offices, physiotherapy clinics, optometrists, chiropractors, pharmacies, walk-in clinics</p>
+        </div>
+        <div class="category-card">
+          <h3>Automotive</h3>
+          <p>Dealerships, oil change shops, auto body repair, tire centres, car washes</p>
+        </div>
+        <div class="category-card">
+          <h3>Food and dining</h3>
+          <p>Pizza shops, family restaurants, cafes, catering companies, meal delivery services</p>
+        </div>
+        <div class="category-card">
+          <h3>Home services</h3>
+          <p>Plumbers, electricians, HVAC, roofing, landscaping, home renovation, pest control</p>
+        </div>
+        <div class="category-card">
+          <h3>Professional services</h3>
+          <p>Real estate agents, law firms, accountants, insurance brokers, mortgage brokers</p>
+        </div>
+        <div class="category-card">
+          <h3>Retail</h3>
+          <p>Sporting goods stores, pet stores, grocery, hardware, clothing</p>
+        </div>
+        <div class="category-card">
+          <h3>Education and childcare</h3>
+          <p>Tutoring centres, daycares, private schools, music lessons, dance studios</p>
+        </div>
+        <div class="category-card">
+          <h3>Fitness and recreation</h3>
+          <p>Gyms, martial arts studios, swimming lessons, personal trainers</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="stats-row">
-        <div class="stat">
-          <span class="stat-number">90</span>
-          <span class="stat-label">minutes average dwell time</span>
+  <section class="ad-format-section">
+    <div class="container">
+      <h2>What your ad looks like</h2>
+      <p>Your ad runs full-screen on a 65-inch commercial-grade 4K display. It's bright, sharp, and impossible to miss.</p>
+      <div class="format-features">
+        <div class="format-item">
+          <strong>Full screen</strong> — no sharing space with other advertisers
         </div>
-        <div class="stat">
-          <span class="stat-number">3-5x</span>
-          <span class="stat-label">weekly repeat exposure</span>
+        <div class="format-item">
+          <strong>Large format</strong> — visible from across the lobby or stands
         </div>
-        <div class="stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">local audience</span>
+        <div class="format-item">
+          <strong>High-definition</strong> — your logo and message look professional
+        </div>
+        <div class="format-item">
+          <strong>Rotation</strong> — your ad appears multiple times per hour in a content loop
+        </div>
+        <div class="format-item">
+          <strong>Context</strong> — it runs alongside sports scores, weather, and community info that keeps eyes on the screen
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How much does it cost to advertise at a single arena?</h3>
+          <p>Local single-venue campaigns are our most affordable option, designed for small business budgets. Rates depend on the specific venue and your campaign length. Longer commitments get better rates. <a href="/advertisers/pricing/">See pricing details</a>.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need to provide my own ad design?</h3>
+          <p>No. Our design team creates your ad at no extra charge. Just send us your logo and the message you want to communicate.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long should I run my campaign?</h3>
+          <p>We recommend a minimum of 12 weeks. Arena advertising builds recognition through repetition — the same families see your ad week after week. The longer you run, the stronger the recall.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I advertise at multiple arenas?</h3>
+          <p>Absolutely. Many local businesses advertise at 2-5 nearby venues to cover their entire service area. Multi-venue packages are available at reduced rates.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if I want to change my ad?</h3>
+          <p>You can update your creative at any time during your campaign. Seasonal promotions, new offers, or refreshed messaging — just send us the update and we'll have it live within 48 hours.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this better than sponsoring a local team?</h3>
+          <p>Team sponsorship gets your name on a jersey seen by one team's parents. Arena advertising puts your message in front of every person who walks into the building — across every sport, every age group, and every event. The reach is dramatically larger.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta">
-    <h2>Ready to reach your neighbors?</h2>
-    <p>Tell us about your business and we'll find the right venues for you</p>
-    <a href="/contact" class="btn-white">Get started</a>
+    <h2>Get a free quote for your local arena</h2>
+    <p>Tell us which arena is in your area and we'll send you a custom quote within one business day. No obligation, no pressure.</p>
+    <a href="/contact/" class="btn-white">Get a quote</a>
   </section>
 </BaseLayout>
 
 <style>
-  .content-section {
+  .intro-section {
     padding: 4rem 1.5rem;
+    background: var(--gray-100);
   }
   .container {
     max-width: 1140px;
     margin: 0 auto;
   }
-  .container h2 {
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
     margin-bottom: 1rem;
   }
-  .container > p {
-    font-size: 1.125rem;
-    color: var(--gray-500);
-    margin-bottom: 3rem;
-    max-width: 800px;
+  .intro-section p {
+    color: var(--gray-600, #495057);
+    font-size: 1.1rem;
+    max-width: 900px;
   }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+
+  .comparison-section {
+    padding: 5rem 1.5rem;
   }
-  .feature-card {
-    background: var(--gray-100);
-    padding: 2rem;
-    border-radius: 8px;
-  }
-  .feature-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-  .feature-card p {
-    color: var(--gray-500);
-    margin: 0;
-  }
-  .highlight-box {
-    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
-    color: var(--white);
-    padding: 2.5rem;
-    border-radius: 8px;
-    margin-bottom: 3rem;
-  }
-  .highlight-box h3 {
+  .comparison-section h2 {
     margin-bottom: 1.5rem;
   }
-  .highlight-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .comparison-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+    max-width: 800px;
+  }
+  .comparison-table {
+    margin-top: 2rem;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200, #e9ecef);
+  }
+  th {
+    background: var(--gray-100);
+    font-weight: 600;
+  }
+  th:first-child {
+    width: 120px;
+  }
+
+  .how-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .how-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .steps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0.75rem;
-  }
-  .highlight-box li {
-    padding-left: 1.5rem;
-    position: relative;
-  }
-  .highlight-box li::before {
-    content: ">";
-    position: absolute;
-    left: 0;
-    color: var(--blue);
-  }
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+  }
+  .step {
     text-align: center;
   }
-  .stat-number {
-    display: block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
     font-weight: 700;
-    color: var(--blue);
-    line-height: 1;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
-  .stat-label {
-    display: block;
+  .step h3 {
+    margin-bottom: 0.75rem;
+  }
+  .step p {
     color: var(--gray-500);
-    margin-top: 0.5rem;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .categories-section {
+    padding: 5rem 1.5rem;
+  }
+  .categories-section h2 {
+    margin-bottom: 1rem;
+  }
+  .categories-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .category-card {
+    background: var(--gray-100);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .category-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .category-card p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .ad-format-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .ad-format-section h2 {
+    margin-bottom: 1rem;
+  }
+  .ad-format-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .format-features {
+    display: grid;
+    gap: 1rem;
+    max-width: 700px;
+  }
+  .format-item {
+    padding: 1rem 1.5rem;
+    background: var(--white);
+    border-radius: 4px;
+    border-left: 3px solid var(--blue);
+  }
+
+  .faq-section {
+    padding: 5rem 1.5rem;
+  }
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq-item p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .faq-item a {
+    color: var(--blue);
+  }
+
+  @media (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

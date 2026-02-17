@@ -5,7 +5,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Sports Digital Network",
-  "description": "Canada's premium digital out-of-home advertising network with 100+ venues across Ontario, British Columbia, Alberta, and Quebec.",
+  "description": "Canada's premium digital out-of-home advertising network with 100+ venues across Ontario, Western Canada, and Atlantic Canada.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Toronto",
@@ -16,208 +16,367 @@ const localBusinessSchema = {
     {"@type": "State", "name": "Ontario"},
     {"@type": "State", "name": "British Columbia"},
     {"@type": "State", "name": "Alberta"},
-    {"@type": "State", "name": "Quebec"}
+    {"@type": "State", "name": "Saskatchewan"},
+    {"@type": "State", "name": "Nova Scotia"},
+    {"@type": "State", "name": "New Brunswick"}
   ]
 };
 ---
 
 <BaseLayout
-  title="Network locations - Sports Digital Network"
-  description="Explore SDN's 100+ venue locations across Canada. Community arenas, recreation centers, and golf courses in Ontario, BC, Alberta, and Quebec."
+  title="SDN Venue Locations | 100+ Arenas & Golf Courses Across Canada"
+  description="See every arena, golf course, and rec centre in the Sports Digital Network. 100+ venues from Vancouver to Halifax. Find locations near you."
   canonicalPath="/network/locations/"
   schema={localBusinessSchema}
 >
   <section class="page-hero">
-    <h1>Our network</h1>
-    <p>100+ premium venues across Canada</p>
+    <h1>Our network: 100+ venues across Canada</h1>
+    <p>The biggest, busiest sports and recreation facilities from coast to coast</p>
   </section>
 
-  <section class="content-section">
+  <section class="intro-section">
     <div class="container">
-      <h2>Where communities gather</h2>
-      <p>SDN operates in the places where Canadians spend quality time with family and friends. Our network spans community arenas, recreation centers, and golf courses in major markets across the country.</p>
+      <p class="lead">Sports Digital Network operates digital advertising screens in 100+ of the biggest, busiest sports and recreation facilities in the country. Every venue was selected because it's a high-traffic hub in its community — multi-pad arenas, premier golf courses, and major recreation centres that draw thousands of visitors every week.</p>
+    </div>
+  </section>
 
-      <!-- Map placeholder -->
+  <section class="map-section">
+    <div class="container">
       <div class="map-placeholder">
         <div class="map-inner">
-          <h3>Interactive map coming soon</h3>
-          <p>Explore our venue locations across Canada</p>
-        </div>
-      </div>
-
-      <div class="regions-grid">
-        <div class="region-card">
-          <h3>Ontario</h3>
-          <p class="venue-count">60+ venues</p>
-          <ul>
-            <li>Greater Toronto Area</li>
-            <li>Ottawa - Gatineau</li>
-            <li>Hamilton - Burlington</li>
-            <li>London - Kitchener</li>
-            <li>Niagara Region</li>
-          </ul>
-        </div>
-        <div class="region-card">
-          <h3>British Columbia</h3>
-          <p class="venue-count">15+ venues</p>
-          <ul>
-            <li>Greater Vancouver</li>
-            <li>Fraser Valley</li>
-            <li>Victoria</li>
-            <li>Kelowna - Okanagan</li>
-          </ul>
-        </div>
-        <div class="region-card">
-          <h3>Alberta</h3>
-          <p class="venue-count">15+ venues</p>
-          <ul>
-            <li>Calgary</li>
-            <li>Edmonton</li>
-            <li>Red Deer</li>
-            <li>Lethbridge</li>
-          </ul>
-        </div>
-        <div class="region-card">
-          <h3>Quebec</h3>
-          <p class="venue-count">10+ venues</p>
-          <ul>
-            <li>Montreal</li>
-            <li>Quebec City</li>
-            <li>Laval</li>
-            <li>Gatineau</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="venue-types">
-        <h3>Venue types in our network</h3>
-        <div class="types-grid">
-          <div class="type-item">
-            <span class="type-icon">&#127954;</span>
-            <div>
-              <h4>Community arenas</h4>
-              <p>Hockey rinks and ice facilities across Canada</p>
-            </div>
-          </div>
-          <div class="type-item">
-            <span class="type-icon">&#127947;</span>
-            <div>
-              <h4>Recreation centers</h4>
-              <p>Multi-sport facilities serving families</p>
-            </div>
-          </div>
-          <div class="type-item">
-            <span class="type-icon">&#9971;</span>
-            <div>
-              <h4>Golf courses</h4>
-              <p>Clubhouses and pro shops</p>
-            </div>
-          </div>
+          <h3>Interactive venue map</h3>
+          <p>Filter by province, venue type, and market</p>
+          <a href="/contact/" class="btn-primary">Request full venue list</a>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="venue-types-section">
+    <div class="container">
+      <h2>Venue types in our network</h2>
+
+      <div class="types-grid">
+        <div class="type-card">
+          <h3>Community arenas</h3>
+          <p>Multi-pad hockey arenas and recreation complexes — the backbone of our network. These facilities typically feature 2-4 ice pads, spectator seating, lobbies, and concession areas with weekly visitor counts in the tens of thousands. Our arena partners include facilities operated by Canlan Sports and Nustadia Recreation, plus directly partnered municipal and independent arenas.</p>
+        </div>
+        <div class="type-card">
+          <h3>Private golf courses</h3>
+          <p>Premium clubhouse environments serving affluent membership bases. Our golf network includes 24 ClubLink courses across Ontario — Canada's largest private golf course network — with expansion underway nationally.</p>
+        </div>
+        <div class="type-card">
+          <h3>Indoor soccer and multi-sport facilities</h3>
+          <p>Large-format indoor sports facilities hosting soccer leagues, lacrosse, football, and multi-sport programming. These venues draw high volumes of active, family-oriented visitors year-round.</p>
+        </div>
+        <div class="type-card">
+          <h3>Recreation centres</h3>
+          <p>Multi-use community facilities that combine ice pads with pools, gyms, fitness centres, and program rooms. These are among the highest-traffic public buildings in their communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="regions-section">
+    <div class="container">
+      <h2>Coverage by region</h2>
+
+      <div class="region-block">
+        <h3>Ontario</h3>
+        <p>Our largest concentration of venues, including the Greater Toronto Area, Ottawa, Hamilton, Kitchener-Waterloo, London, Brantford, Oshawa, Barrie, and surrounding communities. Ontario venues include Canlan Sports arenas, Nustadia-managed municipal facilities, ClubLink golf courses, and major independent recreation centres.</p>
+
+        <div class="key-venues">
+          <h4>Key Ontario venues include:</h4>
+          <ul>
+            <li>Canlan Etobicoke, North York, Scarborough, Oakville, Oshawa</li>
+            <li>Toronto Pan Am Sports Centre</li>
+            <li>Cavanagh Sensplex (Ottawa)</li>
+            <li>Wayne Gretzky Sports Centre (Brantford)</li>
+            <li>Sixteen Mile Sports Complex (Oakville)</li>
+            <li>Western Fair Sports Centre (London)</li>
+            <li>Mohawk 4 Ice Centre (Hamilton)</li>
+            <li>TRIO Sportsplex & Event Centre</li>
+            <li>24 ClubLink golf courses</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="region-block">
+        <h3>Western Canada</h3>
+        <p>Coverage in British Columbia, Alberta, and Saskatchewan, including Vancouver-area facilities, Calgary-area arenas, and major Saskatchewan complexes.</p>
+
+        <div class="key-venues">
+          <h4>Key Western venues include:</h4>
+          <ul>
+            <li>Pitt Meadows Arena Complex (Metro Vancouver)</li>
+            <li>Spray Lakes Sawmills Family Sports Centre (Cochrane, AB)</li>
+            <li>Co-operators Centre (Regina)</li>
+            <li>Merlis Belsher Place (Saskatoon)</li>
+            <li>County of Grande Prairie Sportsplex</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="region-block">
+        <h3>Atlantic Canada</h3>
+        <p>Facilities in Nova Scotia and New Brunswick serving Halifax, Moncton, and surrounding communities.</p>
+
+        <div class="key-venues">
+          <h4>Key Atlantic venues include:</h4>
+          <ul>
+            <li>BMO Centre (Halifax)</li>
+            <li>Red Ball Internet Centre (Moncton)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="region-block quebec-block">
+        <h3>Quebec</h3>
+        <p>SDN's Quebec strategy is in development through our NAMG partnership with Sport-Media Marketing, which covers 89% of arenas in the province. Contact us for Quebec campaign opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <h2>Network highlights</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">of SDN venues are multi-pad or multi-sport facilities</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4x</span>
+          <span class="stat-label">more multi-pad arenas than any other digital network in Canada</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3.6M</span>
+          <span class="stat-label">weekly visitors across all venues</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">35M</span>
+          <span class="stat-label">weekly impressions available</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">90+</span>
+          <span class="stat-label">minutes average visitor dwell time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="request-section">
+    <div class="container">
+      <h2>Can't find the venue you need?</h2>
+      <p>Our network is growing. If you want to advertise in a specific venue that isn't listed, tell us and we'll work to make it happen. SDN's venue development team is actively adding new facilities to the network.</p>
+      <a href="/contact/" class="btn-outline">Request a specific venue</a>
+    </div>
+  </section>
+
   <section class="cta">
-    <h2>Want to advertise in specific markets?</h2>
-    <p>Tell us your target geography and we'll show you available venues</p>
-    <a href="/contact" class="btn-white">Get venue list</a>
+    <h2>Venue owners: join our network</h2>
+    <p>If you manage an arena, golf course, or recreation centre and want to add digital advertising revenue to your facility, we'd like to hear from you.</p>
+    <a href="/venues/apply/" class="btn-white">Apply to become a partner</a>
   </section>
 </BaseLayout>
 
 <style>
-  .content-section {
+  .intro-section {
     padding: 4rem 1.5rem;
+    background: var(--gray-100);
   }
   .container {
     max-width: 1140px;
     margin: 0 auto;
   }
-  .container h2 {
-    margin-bottom: 1rem;
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 900px;
+    color: var(--gray-600, #495057);
   }
-  .container > p {
-    font-size: 1.125rem;
-    color: var(--gray-500);
-    margin-bottom: 3rem;
-    max-width: 800px;
+
+  .map-section {
+    padding: 3rem 1.5rem;
   }
   .map-placeholder {
-    background: var(--gray-100);
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200, #e9ecef) 100%);
     border-radius: 8px;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     text-align: center;
-    margin-bottom: 3rem;
     border: 2px dashed var(--gray-300, #dee2e6);
   }
   .map-inner h3 {
     margin-bottom: 0.5rem;
-    color: var(--gray-500);
+    color: var(--gray-600, #495057);
   }
   .map-inner p {
-    margin: 0;
-    color: var(--gray-400, #adb5bd);
-  }
-  .regions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  .region-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200, #e9ecef);
-    border-radius: 8px;
-    padding: 2rem;
-  }
-  .region-card h3 {
-    margin: 0 0 0.5rem 0;
-  }
-  .venue-count {
-    color: var(--blue);
-    font-weight: 600;
-    margin: 0 0 1rem 0;
-  }
-  .region-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .region-card li {
-    padding: 0.25rem 0;
+    margin: 0 0 1.5rem;
     color: var(--gray-500);
-    font-size: 0.9rem;
   }
-  .venue-types {
-    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+  .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--blue);
     color: var(--white);
-    padding: 2.5rem;
-    border-radius: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
   }
-  .venue-types h3 {
-    margin-bottom: 2rem;
+  .btn-primary:hover {
+    background: #2589d0;
+  }
+
+  .venue-types-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .venue-types-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
   }
   .types-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
-  .type-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+  .type-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
   }
-  .type-icon {
-    font-size: 2rem;
+  .type-card h3 {
+    margin-bottom: 1rem;
+  }
+  .type-card p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .regions-section {
+    padding: 5rem 1.5rem;
+  }
+  .regions-section h2 {
+    margin-bottom: 3rem;
+  }
+  .region-block {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--gray-200, #e9ecef);
+  }
+  .region-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .region-block h3 {
+    margin-bottom: 1rem;
+    color: var(--blue);
+  }
+  .region-block > p {
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+  }
+  .key-venues {
+    background: var(--gray-100);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+  }
+  .key-venues h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .key-venues ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 2rem;
+  }
+  .key-venues li {
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    position: relative;
+    color: var(--gray-600, #495057);
+    font-size: 0.95rem;
+  }
+  .key-venues li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+  }
+  .quebec-block {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .stats-section {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+  }
+  .stats-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blue);
     line-height: 1;
   }
-  .type-item h4 {
-    margin: 0 0 0.25rem 0;
-    font-size: 1.125rem;
-  }
-  .type-item p {
-    margin: 0;
-    opacity: 0.8;
+  .stat-label {
+    display: block;
+    opacity: 0.9;
+    margin-top: 0.5rem;
     font-size: 0.9rem;
+  }
+
+  .request-section {
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .request-section h2 {
+    margin-bottom: 1rem;
+  }
+  .request-section p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover {
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  @media (max-width: 768px) {
+    .key-venues ul {
+      columns: 1;
+    }
   }
 </style>

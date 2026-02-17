@@ -1,66 +1,423 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sports Digital Network",
+  "url": "https://sdnetwork.ca",
+  "description": "Canada's largest digital out-of-home network in community sports venues. 100+ facilities. 3.6M weekly visitors.",
+  "foundingDate": "2022",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-647-405-4988",
+    "contactType": "sales"
+  }
+};
 ---
 
 <BaseLayout
-  title="About Us - Sports Digital Network"
-  description="Learn about Sports Digital Network, Canada's leading digital out-of-home advertising network connecting brands with communities at sports venues."
+  title="About Sports Digital Network | Canada's DOOH Leader | SDN"
+  description="Sports Digital Network is Canada's largest digital out-of-home network in community sports venues. 100+ facilities. 3.6M weekly visitors. Founded 2022."
   canonicalPath="/about/"
+  schema={orgSchema}
 >
   <section class="page-hero">
-    <h1>About SDN</h1>
-    <p>Building Canada's most engaged advertising network, one community at a time</p>
+    <h1>We built the network that brings brands into the heart of Canadian communities</h1>
+    <p>Canada's largest digital out-of-home network focused exclusively on community sports venues</p>
   </section>
 
-  <section class="story">
-    <div class="story-container">
-      <h2>Our story</h2>
-      <p>Sports Digital Network was founded with a simple observation: as local newspapers closed and traditional advertising fragmented, community gathering places didn't disappear - they got busier.</p>
-      <p>Every week, millions of Canadians spend meaningful time at local arenas watching their kids play hockey, at golf courses building business relationships, and at recreation centers connecting with neighbors. These venues became the new town squares - and the most authentic way to reach local communities.</p>
-      <div class="highlight">We built SDN to bridge the gap between brands seeking engaged local audiences and venues looking for new revenue streams.</div>
-      <p>Today, our network spans 100+ premium venues across Canada, delivering 35 million weekly impressions to audiences that are genuinely present and engaged - not scrolling past or skipping ahead.</p>
+  <section class="story-section">
+    <div class="container">
+      <p class="lead">Sports Digital Network was founded in 2022 with a straightforward idea: Canadians spend more engaged time in community arenas, recreation centres, and golf courses than almost anywhere else — and that time has real value for advertisers.</p>
+      <p>We've built Canada's largest digital out-of-home network focused exclusively on community sports venues. Our screens are in the busiest multi-pad arenas, the most active recreation centres, and the most prestigious private golf courses in the country.</p>
+      <p>Every venue was chosen because it's the biggest, busiest building in its community — the kind of place where tens of thousands of local residents pass through every month.</p>
     </div>
   </section>
 
-  <section class="values">
-    <div class="values-container">
-      <h2>What drives us</h2>
-      <div class="values-grid">
-        <div class="value-item">
-          <div class="value-number">01</div>
-          <div>
-            <h3>Community first</h3>
-            <p>We believe advertising should enhance community spaces, not detract from them. Every campaign we run reflects the values of the venues and families we serve.</p>
-          </div>
+  <section class="what-section">
+    <div class="container">
+      <h2>What we do</h2>
+      <p>We install, operate, and sell advertising on large-format digital screens inside community sports venues across Canada.</p>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3>For advertisers</h3>
+          <p>We offer access to a coast-to-coast network reaching 3.6 million weekly visitors with 90+ minutes of captive attention per visit. Campaigns can be bought direct, through private marketplaces, or programmatically via Broadsign and major DSPs.</p>
         </div>
-        <div class="value-item">
-          <div class="value-number">02</div>
-          <div>
-            <h3>Quality over quantity</h3>
-            <p>We'd rather deliver fewer, more meaningful impressions than chase vanity metrics. Our network is curated, not commoditized.</p>
-          </div>
+        <div class="audience-card">
+          <h3>For venue partners</h3>
+          <p>We offer a zero-cost revenue stream. We cover the full cost of screen installation and maintenance, manage all content and advertising sales, and pay venues guaranteed monthly revenue.</p>
         </div>
-        <div class="value-item">
-          <div class="value-number">03</div>
-          <div>
-            <h3>Partnership mindset</h3>
-            <p>Our venue partners aren't just locations - they're collaborators. Their success is our success, and we invest accordingly.</p>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <h2>Our network at a glance</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">premium venues from Vancouver to Halifax</span>
         </div>
-        <div class="value-item">
-          <div class="value-number">04</div>
-          <div>
-            <h3>Measurable impact</h3>
-            <p>We believe in transparency and accountability. Our advertisers know exactly what they're getting and can measure real results.</p>
-          </div>
+        <div class="stat-item">
+          <span class="stat-number">3.6M</span>
+          <span class="stat-label">weekly visitors across the network</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">35M</span>
+          <span class="stat-label">weekly impressions</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">90+</span>
+          <span class="stat-label">minutes average visitor dwell time</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">65"</span>
+          <span class="stat-label">4K commercial-grade displays</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">of venues are multi-pad or multi-sport facilities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners-section">
+    <div class="container">
+      <h2>Our venue partners</h2>
+      <p>We operate in partnership with three of Canada's most established venue operators:</p>
+
+      <div class="partners-grid">
+        <div class="partner-card">
+          <h3>ClubLink</h3>
+          <p>Canada's largest owner of private golf courses, with 24 locations across Ontario. ClubLink courses serve an affluent membership base, making them premium advertising environments.</p>
+        </div>
+        <div class="partner-card">
+          <h3>Canlan Sports</h3>
+          <p>Canada's largest owner/operator of private arena facilities. Canlan's multi-pad arenas in major markets are among the highest-traffic facilities in our network.</p>
+        </div>
+        <div class="partner-card">
+          <h3>Nustadia Recreation</h3>
+          <p>Canada's largest operator of community municipal arena facilities. Nustadia manages multi-pad complexes and recreation centres in markets across the country.</p>
+        </div>
+      </div>
+
+      <p class="partners-note">Together with directly partnered municipal and independent venues, these relationships give SDN access to the biggest, busiest sports and recreation buildings in every major Canadian market.</p>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="container">
+      <h2>Our team</h2>
+      <p>SDN's senior leadership brings together three areas of expertise that most DOOH companies lack:</p>
+
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>Media and agency experience</h3>
+          <p>Our team includes former media agency planners who understand how national brands and agencies buy media, evaluate DOOH, and measure campaign effectiveness.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Sports marketing</h3>
+          <p>We have operators who've spent their careers in sports venue marketing, sponsorship, and fan engagement. They know what works inside an arena.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Venue management</h3>
+          <p>Our partnerships with Canlan, Nustadia, and ClubLink are built on relationships with people who understand facility operations from the inside.</p>
+        </div>
+      </div>
+
+      <p class="team-note">This combination means we build networks that advertisers actually want to buy, in venues that actually work as advertising environments, managed in a way that venues actually appreciate.</p>
+    </div>
+  </section>
+
+  <section class="tech-section">
+    <div class="container">
+      <h2>Our technology</h2>
+      <p>SDN uses <strong>Broadsign</strong> as our content management and SSP platform, the industry standard for DOOH networks. This enables:</p>
+
+      <div class="tech-grid">
+        <div class="tech-item">
+          <strong>Programmatic buying</strong>
+          <span>agencies can purchase SDN inventory through their existing DSP workflows</span>
+        </div>
+        <div class="tech-item">
+          <strong>Real-time content management</strong>
+          <span>screens are updated remotely across the entire network</span>
+        </div>
+        <div class="tech-item">
+          <strong>Proof-of-play verification</strong>
+          <span>every ad delivery is logged and confirmed</span>
+        </div>
+        <div class="tech-item">
+          <strong>Dynamic content</strong>
+          <span>weather, sports scores, and scheduling information update automatically</span>
+        </div>
+        <div class="tech-item">
+          <strong>Dayparting</strong>
+          <span>ads can be targeted to specific times of day or days of the week</span>
+        </div>
+      </div>
+
+      <p>All screens are connected to our network via dedicated internet connections, monitored 24/7 for uptime and performance.</p>
+    </div>
+  </section>
+
+  <section class="namg-section">
+    <div class="container">
+      <h2>National Arena Marketing Group (NAMG)</h2>
+      <p>SDN is a member of the <strong>National Arena Marketing Group (NAMG)</strong>, a national consortium of leading community venue advertising companies. NAMG partners include Sport-Media Marketing (Quebec), FutureSign Multimedia (Ontario), Visual Sports Image (VSI), and Nustadia Recreation.</p>
+      <p>Through NAMG, advertisers can access 800+ arenas and sports complexes across all provinces, creating the largest community venue advertising network in Canada. SDN brings the digital DOOH component to this consortium, complementing the static media capabilities of our NAMG partners.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact us</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <strong>Sports Digital Network</strong>
+          <span>Toronto, ON, Canada</span>
+        </div>
+        <div class="contact-item">
+          <strong>Phone</strong>
+          <span>647-405-4988</span>
+        </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <span>info@sdnetwork.ca</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta">
-    <h2>Ready to work together?</h2>
-    <p>Whether you're an advertiser or venue owner, we'd love to explore how SDN can help</p>
-    <a href="/contact" class="btn-white">Get in touch</a>
+    <h2>Ready to work with us?</h2>
+    <p>Whether you're an advertiser seeking engaged audiences or a venue looking for new revenue streams, we'd like to hear from you.</p>
+    <a href="/contact/" class="btn-white">Get in touch</a>
   </section>
 </BaseLayout>
+
+<style>
+  .story-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .story-section p {
+    color: var(--gray-600, #495057);
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin-bottom: 1rem;
+  }
+
+  .what-section {
+    padding: 5rem 1.5rem;
+  }
+  .what-section h2 {
+    margin-bottom: 1rem;
+  }
+  .what-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  .audience-card {
+    padding: 2rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+  }
+  .audience-card h3 {
+    margin-bottom: 1rem;
+  }
+  .audience-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .stats-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .stats-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+  }
+  .stat-label {
+    display: block;
+    color: var(--gray-500);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .partners-section {
+    padding: 5rem 1.5rem;
+  }
+  .partners-section h2 {
+    margin-bottom: 1rem;
+  }
+  .partners-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .partner-card {
+    padding: 2rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+  }
+  .partner-card h3 {
+    margin-bottom: 1rem;
+  }
+  .partner-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+  .partners-note {
+    font-style: italic;
+    color: var(--gray-500);
+  }
+
+  .team-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .team-section h2 {
+    margin-bottom: 1rem;
+  }
+  .team-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .expertise-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .expertise-card h3 {
+    margin-bottom: 1rem;
+  }
+  .expertise-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+  .team-note {
+    font-style: italic;
+    color: var(--gray-500);
+  }
+
+  .tech-section {
+    padding: 5rem 1.5rem;
+  }
+  .tech-section h2 {
+    margin-bottom: 1rem;
+  }
+  .tech-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .tech-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+  }
+  .tech-item {
+    padding: 1rem 1.5rem;
+    background: var(--gray-100);
+    border-radius: 4px;
+    border-left: 3px solid var(--blue);
+  }
+  .tech-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .tech-item span {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+  }
+
+  .namg-section {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+  }
+  .namg-section h2 {
+    margin-bottom: 1.5rem;
+  }
+  .namg-section p {
+    opacity: 0.9;
+    margin-bottom: 1rem;
+    max-width: 900px;
+  }
+
+  .contact-section {
+    padding: 5rem 1.5rem;
+  }
+  .contact-section h2 {
+    margin-bottom: 2rem;
+  }
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  .contact-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .contact-item span {
+    color: var(--gray-500);
+  }
+
+  @media (max-width: 768px) {
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

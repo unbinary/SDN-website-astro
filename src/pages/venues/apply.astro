@@ -1,0 +1,551 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SDN Venue Partnership Application",
+  "provider": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  },
+  "description": "Apply to add SDN digital advertising screens to your arena, golf course, or rec centre. Zero cost, guaranteed monthly revenue.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": "Venue Advertising Partnership"
+};
+---
+
+<BaseLayout
+  title="Apply to Join SDN | Arena & Golf Course Advertising Partnership"
+  description="Apply to add SDN digital advertising screens to your arena, golf course, or rec centre. Zero cost, guaranteed monthly revenue. Get a revenue estimate in 48 hours."
+  canonicalPath="/venues/apply/"
+  schema={serviceSchema}
+>
+  <section class="page-hero">
+    <h1>Apply to become an SDN venue partner</h1>
+    <p>Get a revenue estimate for your facility within 48 hours</p>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">SDN is expanding its network of community arenas, golf courses, and recreation centres across Canada. If your facility has strong visitor traffic and is in a Canadian market, we'd like to discuss a partnership.</p>
+    </div>
+  </section>
+
+  <section class="what-section">
+    <div class="container">
+      <h2>What you're applying for</h2>
+      <p>A partnership with SDN means:</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <strong>Free installation</strong>
+          <span>We install commercial-grade 65-inch 4K digital screens in your facility at no cost</span>
+        </div>
+        <div class="benefit-item">
+          <strong>Full-service advertising</strong>
+          <span>We sell all advertising on those screens to national and local brands</span>
+        </div>
+        <div class="benefit-item">
+          <strong>Complete management</strong>
+          <span>We manage all content, scheduling, maintenance, and technical support</span>
+        </div>
+        <div class="benefit-item">
+          <strong>Guaranteed revenue</strong>
+          <span>You receive guaranteed monthly revenue payments</span>
+        </div>
+      </div>
+
+      <p class="highlight-text">Your facility pays nothing — not for screens, not for installation, not for maintenance, not for anything. We cover the full investment.</p>
+    </div>
+  </section>
+
+  <section class="criteria-section">
+    <div class="container">
+      <h2>What makes a good SDN venue</h2>
+      <p>We look for facilities that meet these general criteria:</p>
+
+      <div class="criteria-grid">
+        <div class="criteria-card">
+          <h3>High foot traffic</h3>
+          <p>Multi-pad arenas, busy recreation centres, and active golf courses with thousands of weekly visitors are ideal. Single-pad arenas with strong community traffic also qualify.</p>
+        </div>
+        <div class="criteria-card">
+          <h3>Canadian market</h3>
+          <p>We operate nationally, from Vancouver to Halifax. Facilities in metro areas and regional centres are both welcome.</p>
+        </div>
+        <div class="criteria-card">
+          <h3>Indoor public space</h3>
+          <p>We need wall space in high-traffic indoor areas — lobbies, spectator areas, hallways, or clubhouse lounges — where visitors naturally spend time.</p>
+        </div>
+        <div class="criteria-card">
+          <h3>Internet connectivity</h3>
+          <p>Each screen requires a wired internet connection. If connectivity isn't available in the installation location, we'll work with you on a solution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <h2>What happens after you apply</h2>
+
+      <div class="process-steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-content">
+            <strong>We review your application</strong>
+            <span>within two business days</span>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-content">
+            <strong>We send you a preliminary revenue estimate</strong>
+            <span>based on your facility's location, size, and visitor traffic</span>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-content">
+            <strong>We schedule a call</strong>
+            <span>to discuss the partnership in detail, answer your questions, and talk about screen placement</span>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-content">
+            <strong>If we both agree to proceed</strong>
+            <span>we handle everything from there — equipment, installation, content setup, and advertising sales</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="process-note">Most facilities go from application to screens-on-wall within 6-8 weeks.</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="container">
+      <h2>The application</h2>
+      <p>Please provide the following information. All fields help us prepare an accurate revenue estimate for your facility.</p>
+
+      <form class="application-form" name="venue-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="venue-application" />
+        <p class="hidden">
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-group">
+          <h3>Your facility</h3>
+
+          <div class="field">
+            <label for="facility-name">Facility name *</label>
+            <input type="text" id="facility-name" name="facility-name" required />
+          </div>
+
+          <div class="field">
+            <label for="facility-type">Facility type *</label>
+            <select id="facility-type" name="facility-type" required>
+              <option value="">Select facility type...</option>
+              <option value="hockey-arena">Hockey arena</option>
+              <option value="recreation-centre">Recreation centre</option>
+              <option value="golf-course">Golf course</option>
+              <option value="indoor-soccer">Indoor soccer facility</option>
+              <option value="multi-sport">Multi-sport facility</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="address">Address *</label>
+            <input type="text" id="address" name="address" placeholder="Street, City, Province" required />
+          </div>
+
+          <div class="field">
+            <label for="capacity">Number of ice pads / courts / holes (as applicable)</label>
+            <input type="text" id="capacity" name="capacity" />
+          </div>
+
+          <div class="field">
+            <label for="weekly-visitors">Estimated weekly visitor count</label>
+            <input type="text" id="weekly-visitors" name="weekly-visitors" placeholder="e.g., 5,000" />
+          </div>
+
+          <div class="field">
+            <label for="activities">Primary activities hosted</label>
+            <textarea id="activities" name="activities" rows="3" placeholder="e.g., minor hockey, figure skating, public skating, adult leagues"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="existing-advertising">Current advertising or sponsorship arrangements (if any)</label>
+            <textarea id="existing-advertising" name="existing-advertising" rows="2"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="internet">Internet connectivity available in common areas? *</label>
+            <select id="internet" name="internet" required>
+              <option value="">Select...</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="unsure">Unsure</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <h3>Your contact information</h3>
+
+          <div class="field">
+            <label for="contact-name">Your name *</label>
+            <input type="text" id="contact-name" name="contact-name" required />
+          </div>
+
+          <div class="field">
+            <label for="role">Your role / title</label>
+            <input type="text" id="role" name="role" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="field">
+            <label for="best-time">Best time to reach you</label>
+            <input type="text" id="best-time" name="best-time" placeholder="e.g., Mornings, Afternoons" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <h3>Anything else</h3>
+
+          <div class="field">
+            <label for="additional">Questions or additional information you'd like to share</label>
+            <textarea id="additional" name="additional" rows="4"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Submit application</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Is there any cost to my facility?</h3>
+          <p>No. SDN covers 100% of equipment, installation, and maintenance costs. Your facility pays nothing.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long is the partnership agreement?</h3>
+          <p>Typical agreements are multi-year, which allows us to make the capital investment in your facility with confidence. We'll discuss specific terms during the proposal process.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if we already have rink board advertisers or sponsors?</h3>
+          <p>No conflict. Our digital screens are a separate advertising channel from rink boards, banners, and naming rights. We honour all existing sponsorship commitments and work around them.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can we control what appears on the screens?</h3>
+          <p>You can request specific content (facility announcements, event promotions, scheduling information). Advertising content is managed by SDN, but all ads are vetted for appropriateness and brand safety.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if we're part of a municipal recreation department?</h3>
+          <p>We work with many municipal facilities. Our partnerships are structured to comply with municipal procurement and partnership requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact us directly</h2>
+      <p>Prefer to talk before applying? Call us at <strong>647-405-4988</strong> or email <strong>info@sdnetwork.ca</strong>. We're happy to answer questions before you submit a formal application.</p>
+      <div class="contact-links">
+        <a href="tel:647-405-4988" class="contact-link">647-405-4988</a>
+        <a href="mailto:info@sdnetwork.ca" class="contact-link">info@sdnetwork.ca</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 800px;
+  }
+
+  .what-section {
+    padding: 5rem 1.5rem;
+  }
+  .what-section h2 {
+    margin-bottom: 1rem;
+  }
+  .what-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .benefit-item {
+    padding: 1.5rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+    border-left: 3px solid var(--blue);
+  }
+  .benefit-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .benefit-item span {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+  }
+  .highlight-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--black);
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+    border-radius: 8px;
+  }
+
+  .criteria-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .criteria-section h2 {
+    margin-bottom: 1rem;
+  }
+  .criteria-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .criteria-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .criteria-card h3 {
+    margin-bottom: 1rem;
+  }
+  .criteria-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .process-section {
+    padding: 5rem 1.5rem;
+  }
+  .process-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .process-steps {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+  }
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .step-content strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .step-content span {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+  }
+  .process-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--gray-500);
+  }
+
+  .form-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .form-section h2 {
+    margin-bottom: 1rem;
+  }
+  .form-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .application-form {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    max-width: 700px;
+  }
+  .hidden {
+    display: none;
+  }
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  .form-group h3 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-100);
+  }
+  .field {
+    margin-bottom: 1.25rem;
+  }
+  .field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-200, #e9ecef);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(46, 163, 242, 0.1);
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn-primary:hover {
+    background: #2589d0;
+  }
+
+  .faq-section {
+    padding: 5rem 1.5rem;
+  }
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq-item p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .contact-section {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    color: var(--white);
+    text-align: center;
+  }
+  .contact-section h2 {
+    margin-bottom: 1rem;
+  }
+  .contact-section p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  .contact-link:hover {
+    background: rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+    .application-form {
+      padding: 1.5rem;
+    }
+  }
+</style>

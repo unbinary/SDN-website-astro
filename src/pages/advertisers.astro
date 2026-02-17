@@ -1,120 +1,485 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Arena & Sports Venue Advertising",
+  "provider": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  },
+  "description": "Advertise in Canada's busiest arenas, golf courses, and recreation centres. 90+ minutes of captive attention per visit.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": "Digital Out-of-Home Advertising"
+};
 ---
 
 <BaseLayout
-  title="For Advertisers - Sports Digital Network"
-  description="Reach your audience where they actually spend time. National campaigns or hyperlocal targeting across Canada's premium community venues."
+  title="Arena & Sports Venue Advertising in Canada | Reach 3.6M Weekly | SDN"
+  description="Advertise in Canada's busiest arenas, golf courses, and recreation centres. 90+ minutes of captive attention per visit. Full-screen digital ads. Request rates."
   canonicalPath="/advertisers/"
+  schema={serviceSchema}
 >
   <section class="page-hero">
-    <h1>Reach your audience</h1>
-    <p>Connect with Canadians where they actually spend their time</p>
+    <h1>Advertise where 3.6 million Canadians spend 90 minutes every week</h1>
+    <p>Arena advertising through Sports Digital Network puts your brand on large-format digital screens inside Canada's busiest community sports venues — hockey arenas, golf course clubhouses, recreation centres, and indoor soccer facilities.</p>
   </section>
 
-  <!-- National Section -->
-  <section id="national" class="section">
+  <section class="intro-section">
     <div class="container">
-      <div class="section-tag">National brands</div>
-      <h2 class="section-title">Scale your brand across Canada</h2>
-      <p class="section-intro">Premium venues. Affluent demographics. Coast-to-coast reach with one trusted partner.</p>
+      <p class="lead">Unlike billboards or transit ads, our audience isn't passing by. They're sitting down, watching the game, waiting for a tee time, or cheering from the stands. And they're there for over an hour.</p>
+      <p>That's 90+ minutes of repeated exposure to your message in a trusted, family-friendly environment — with no ad blocker, no skip button, and no competition from a second screen.</p>
+    </div>
+  </section>
 
-      <div class="hero-split">
-        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&h=800&fit=crop" alt="National campaign reach" class="hero-img">
-        <div>
-          <h3>One partner, national impact</h3>
-          <p>Our network of 100+ premium venues gives you unparalleled access to Canada's most desirable audiences in environments where families spend quality time together.</p>
-          <ul>
-            <li>35M weekly impressions across major markets</li>
-            <li>Consistent brand presence from Vancouver to Halifax</li>
-            <li>Simplified campaign management and reporting</li>
-            <li>Dynamic digital creative with instant updates</li>
-          </ul>
-        </div>
+  <section class="why-section">
+    <div class="container">
+      <h2>Why arena and venue advertising works</h2>
+
+      <div class="comparison-table">
+        <h3>Dwell time that demolishes every other medium</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Medium</th>
+              <th>Average exposure time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Traditional billboard</td>
+              <td>6 seconds</td>
+            </tr>
+            <tr>
+              <td>Transit shelter</td>
+              <td>4 seconds</td>
+            </tr>
+            <tr>
+              <td>Digital banner ad</td>
+              <td>0.4 seconds (if not blocked)</td>
+            </tr>
+            <tr>
+              <td>Social media ad</td>
+              <td>1.7 seconds</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>SDN venue screen</strong></td>
+              <td><strong>90+ minutes in-venue</strong></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="benefits-grid">
-        <div class="benefit">
-          <div class="benefit-icon">&#128506;</div>
-          <h3>National coverage</h3>
-          <p>100+ premium venues across Canada's major markets. Reach millions of engaged consumers with consistent messaging nationwide.</p>
+        <div class="benefit-card">
+          <h3>Premium demographics, verified</h3>
+          <p>Community arena and golf course visitors are a self-selecting audience of active, engaged, higher-income households:</p>
+          <ul>
+            <li><strong>Household income 35% above national average</strong></li>
+            <li><strong>Decision-makers</strong> — parents managing household spending</li>
+            <li><strong>Repeat visitors</strong> — 2–4 times per week</li>
+            <li><strong>Community-rooted</strong> — they live and spend locally</li>
+          </ul>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#128106;</div>
-          <h3>Premium demographics</h3>
-          <p>Active, affluent families with household incomes 35% above national average. Decision-makers with real purchasing power.</p>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#128241;</div>
-          <h3>Full HD digital</h3>
-          <p>Showcase your products in stunning clarity. Update creative instantly. A/B test messaging across markets.</p>
-        </div>
-      </div>
-
-      <div class="stats-bar">
-        <div class="stats-grid">
-          <div class="stat"><div class="stat-number">100+</div><div class="stat-label">Premium venues</div></div>
-          <div class="stat"><div class="stat-number">35M</div><div class="stat-label">Weekly impressions</div></div>
-          <div class="stat"><div class="stat-number">$105K</div><div class="stat-label">Avg household income</div></div>
-          <div class="stat"><div class="stat-number">350</div><div class="stat-label">Ad plays per day</div></div>
+        <div class="benefit-card">
+          <h3>Brand-safe, fraud-free, unskippable</h3>
+          <p>Every impression on our network is a real human being in a real place. There's no bot traffic, no viewability questions, no brand safety concerns.</p>
+          <p>Our screens are the only advertising surface in the venue. No clutter. No competing ads on the same screen. Full-screen, full-attention placement every time.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Local Section -->
-  <section id="local" class="section">
+  <section class="formats-section">
     <div class="container">
-      <div class="section-tag">Local businesses</div>
-      <h2 class="section-title">Your customers are already here</h2>
-      <p class="section-intro">Hyperlocal targeting that puts your brand in front of your neighborhood - nowhere else.</p>
-
-      <div class="hero-split" style="grid-template-columns: 1fr 1fr;">
-        <div>
-          <h3>Stop wasting money on wide reach</h3>
-          <p>Every week, your neighbors gather at local arenas and golf courses. Families watching kids play hockey. Business owners on the back nine. Community members supporting local teams.</p>
-          <ul>
-            <li>Only reach people in your service area</li>
-            <li>90+ minute captive attention spans</li>
-            <li>Flexible budgets - target just your local venue</li>
-            <li>Associate with community pride and family time</li>
-          </ul>
+      <h2>Our advertising formats</h2>
+      <div class="formats-grid">
+        <div class="format-card">
+          <h3>Full-screen digital ads</h3>
+          <p>Your ad takes over the entire 65-inch 4K display. Static or video creative, running in a content loop alongside sports scores, weather, and community content.</p>
         </div>
-        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&h=800&fit=crop" alt="Local community sports" class="hero-img">
-      </div>
-
-      <div class="benefits-grid">
-        <div class="benefit">
-          <div class="benefit-icon">&#127919;</div>
-          <h3>Hyperlocal targeting</h3>
-          <p>Stop paying for impressions outside your market. Our venue-based approach means you only reach actual potential customers in your community.</p>
+        <div class="format-card">
+          <h3>Scheduling screen placements</h3>
+          <p>Split-screen placements on arena scheduling displays — the screens every parent, player, and coach checks when they walk in.</p>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#9201;</div>
-          <h3>Captive attention</h3>
-          <p>Your audience spends 90+ minutes in our venues. They're not scrolling, not skipping, not distracted - they're present and engaged.</p>
+        <div class="format-card">
+          <h3>Programmatic DOOH</h3>
+          <p>Buy SDN inventory through Canada's leading demand-side platforms. Our Broadsign integration makes programmatic buying seamless.</p>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#128176;</div>
-          <h3>Affordable and flexible</h3>
-          <p>No massive media buys required. Target just your neighborhood arena or expand to multiple venues as your business grows.</p>
+        <div class="format-card">
+          <h3>Direct and PMP deals</h3>
+          <p>Work directly with our team for custom campaigns, sponsorships, and exclusive placements with category exclusivity.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="stats-bar">
-        <div class="stats-grid">
-          <div class="stat"><div class="stat-number">3.6M</div><div class="stat-label">Weekly visits</div></div>
-          <div class="stat"><div class="stat-number">90min</div><div class="stat-label">Avg visit duration</div></div>
-          <div class="stat"><div class="stat-number">3-5x</div><div class="stat-label">Weekly frequency</div></div>
-          <div class="stat"><div class="stat-number">75%</div><div class="stat-label">Decision makers</div></div>
+  <section class="categories-section">
+    <div class="container">
+      <h2>Who advertises with SDN</h2>
+      <div class="categories-grid">
+        <div class="category">Automotive — dealerships and service centres</div>
+        <div class="category">Financial services — banks, insurance, investment firms</div>
+        <div class="category">Quick-service and casual dining</div>
+        <div class="category">Healthcare — dental, physio, optometry, pharmacy</div>
+        <div class="category">Home services — HVAC, renovation, landscaping</div>
+        <div class="category">Retail — sporting goods, grocery, electronics</div>
+        <div class="category">Telecommunications — wireless, internet providers</div>
+        <div class="category">Government and public service</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scale-section">
+    <div class="container">
+      <h2>Choose your scale</h2>
+      <div class="scale-grid">
+        <a href="/advertisers/national/" class="scale-card">
+          <h3>National campaigns</h3>
+          <p>Activate across all 100+ venues for coast-to-coast reach. Ideal for brand awareness, product launches, and national promotions.</p>
+          <span class="link-text">Learn more</span>
+        </a>
+        <a href="/advertisers/local/" class="scale-card">
+          <h3>Local campaigns</h3>
+          <p>Target a single venue or cluster of locations in your market. Ideal for local businesses, franchisees, and regional promotions.</p>
+          <span class="link-text">Learn more</span>
+        </a>
+        <a href="/contact/" class="scale-card">
+          <h3>Custom campaigns</h3>
+          <p>Grassroots activations, tournament sponsorships, venue naming rights, and integrated campaigns with on-site presence.</p>
+          <span class="link-text">Contact us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="container">
+      <h2>How to get started</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Tell us your goals</h3>
+          <p>Fill out our inquiry form or call us. We'll ask about your target audience, geography, budget, and timing.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Get a custom proposal</h3>
+          <p>We'll recommend the right venues, formats, and flight dates based on your objectives.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Approve your creative</h3>
+          <p>Send us finished assets or let our team design your ad. We accept static images and video up to 15 seconds.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <h3>Go live and measure</h3>
+          <p>Your campaign launches across your selected venues. We provide impression reporting and proof-of-play verification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How much does arena advertising cost?</h3>
+          <p>Rates vary by market size, number of venues, campaign duration, and format. <a href="/advertisers/pricing/">See our pricing guide</a>.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What creative specs do you accept?</h3>
+          <p>Static images (1920x1080 px, JPG/PNG) and video (MP4, up to 15 seconds, 1080p). Our design team can produce creative at no extra charge.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long is a typical campaign?</h3>
+          <p>Campaigns run in 4-week increments with a minimum 4-week commitment. Longer flights receive preferred rates.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I target specific venues?</h3>
+          <p>Yes. Select individual venues, groups of venues in a market, or activate across the entire national network.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is arena advertising measured?</h3>
+          <p>We report impressions based on verified venue foot traffic data. All screens provide proof-of-play confirmation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I buy programmatically?</h3>
+          <p>Yes. We're integrated with Broadsign and available through major DSPs. Contact us for Deal IDs.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta">
-    <h2>Ready to reach your audience?</h2>
-    <p>Let's create a campaign that connects your brand with the communities that matter</p>
-    <a href="/contact" class="btn-white">Request a proposal</a>
+    <h2>Put your brand in the game</h2>
+    <p>Request a custom proposal for your campaign. Our team will respond within one business day.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn-white">Request a proposal</a>
+      <a href="/resources/media-kit/" class="btn-outline">Download our media kit</a>
+      <a href="/advertisers/pricing/" class="btn-outline">See pricing</a>
+    </div>
   </section>
 </BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .intro-section p {
+    color: var(--gray-600, #495057);
+    font-size: 1.1rem;
+    max-width: 900px;
+  }
+
+  .why-section {
+    padding: 5rem 1.5rem;
+  }
+  .why-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .comparison-table {
+    background: var(--white);
+    border: 1px solid var(--gray-200, #e9ecef);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  .comparison-table h3 {
+    margin-bottom: 1.5rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200, #e9ecef);
+  }
+  th {
+    background: var(--gray-100);
+    font-weight: 600;
+  }
+  .highlight-row {
+    background: var(--blue);
+    color: var(--white);
+  }
+  .highlight-row td {
+    border-bottom: none;
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  .benefit-card {
+    padding: 2rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+  }
+  .benefit-card h3 {
+    margin-bottom: 1rem;
+  }
+  .benefit-card ul {
+    margin: 1rem 0 0 0;
+    padding-left: 1.25rem;
+  }
+  .benefit-card li {
+    margin-bottom: 0.5rem;
+  }
+
+  .formats-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .formats-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .formats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .format-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .format-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  .format-card p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .categories-section {
+    padding: 5rem 1.5rem;
+  }
+  .categories-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .category {
+    padding: 1rem;
+    background: var(--gray-100);
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+
+  .scale-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .scale-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .scale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .scale-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.3s ease;
+    display: block;
+  }
+  .scale-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .scale-card h3 {
+    margin-bottom: 1rem;
+  }
+  .scale-card p {
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+  }
+  .link-text {
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  .steps-section {
+    padding: 5rem 1.5rem;
+  }
+  .steps-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .step {
+    text-align: center;
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .step h3 {
+    margin-bottom: 0.75rem;
+  }
+  .step p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .faq-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq-item p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .faq-item a {
+    color: var(--blue);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border: 2px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+
+  @media (max-width: 768px) {
+    .benefits-grid, .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

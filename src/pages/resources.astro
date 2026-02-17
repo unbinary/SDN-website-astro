@@ -1,102 +1,345 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Arena Advertising Resources, Guides & Research",
+  "description": "Free guides, research, and tools for arena advertising and DOOH in Canada. Media kit, pricing guides, demographic data, and expert blog content from SDN.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sports Digital Network"
+  }
+};
 ---
 
 <BaseLayout
-  title="Resources and Insights - Sports Digital Network"
-  description="Learn how brands are connecting with communities through SDN. Articles, case studies, and insights on DOOH advertising."
+  title="Arena Advertising Resources, Guides & Research | SDN"
+  description="Free guides, research, and tools for arena advertising and DOOH in Canada. Media kit, pricing guides, demographic data, and expert blog content from SDN."
   canonicalPath="/resources/"
+  schema={webPageSchema}
 >
   <section class="page-hero">
-    <h1>Resources and insights</h1>
-    <p>Learn how brands are connecting with communities through SDN</p>
+    <h1>Resources</h1>
+    <p>Guides, research, and tools for arena and venue advertising</p>
   </section>
 
-  <section class="tabs">
-    <div class="tabs-container">
-      <button class="tab-btn active" data-tab="articles">Articles</button>
-      <button class="tab-btn" data-tab="case-studies">Case studies</button>
-      <button class="tab-btn" data-tab="gallery">Gallery</button>
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">Everything you need to evaluate, plan, and run advertising campaigns in Canada's community sports venues — or to understand what an SDN venue partnership can do for your facility.</p>
     </div>
   </section>
 
-  <div id="articles" class="tab-content active">
-    <div class="container" style="max-width: 1140px; margin: 0 auto;">
-      <h2 class="section-title" style="text-align: center;">Latest insights</h2>
-      <div class="articles-grid">
-        <div class="article-card">
-          <div class="article-header">&#128240;</div>
-          <div class="article-body">
-            <h3>The death of local media (and what replaced it)</h3>
-            <div class="article-meta">5 min read | Industry insights</div>
-            <p>As newspapers closed and radio consolidated, community gathering places became the new local media. Here's what that means for advertisers.</p>
+  <section class="downloads-section">
+    <div class="container">
+      <h2>Downloads</h2>
+      <div class="downloads-grid">
+        <a href="/resources/media-kit/" class="download-card">
+          <div class="download-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="12" y1="18" x2="12" y2="12"></line>
+              <line x1="9" y1="15" x2="12" y2="18"></line>
+              <line x1="15" y1="15" x2="12" y2="18"></line>
+            </svg>
+          </div>
+          <div class="download-content">
+            <h3>Media kit</h3>
+            <p>Network overview, demographics, venue list, creative specifications, and rate information. Available as a PDF download.</p>
+            <span class="link-text">Download media kit</span>
+          </div>
+        </a>
+
+        <a href="/advertisers/pricing/" class="download-card">
+          <div class="download-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <div class="download-content">
+            <h3>Pricing guide</h3>
+            <p>Detailed pricing information for local, regional, and national campaigns across the SDN network.</p>
+            <span class="link-text">View pricing guide</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="guides-section">
+    <div class="container">
+      <h2>Guides and research</h2>
+
+      <div class="guides-category">
+        <h3>For advertisers</h3>
+        <div class="guides-grid">
+          <div class="guide-card">
+            <h4>The complete guide to arena advertising in Canada</h4>
+            <p>Everything you need to know — formats, demographics, costs, effectiveness, and how to get started.</p>
+          </div>
+          <div class="guide-card">
+            <h4>Golf course advertising: a complete guide</h4>
+            <p>How to reach Canada's most affluent audience through golf clubhouse advertising.</p>
+          </div>
+          <div class="guide-card">
+            <h4>How much does arena advertising cost?</h4>
+            <p>Pricing factors, typical ranges, and how to get the best value from your budget.</p>
+          </div>
+          <div class="guide-card">
+            <h4>DOOH advertising 101</h4>
+            <p>What digital out-of-home advertising is, how it's bought, and why it's growing.</p>
+          </div>
+          <div class="guide-card">
+            <h4>5 reasons arena advertising beats digital ads</h4>
+            <p>Why hockey rink advertising outperforms Facebook and Google for local businesses.</p>
+          </div>
+          <div class="guide-card">
+            <h4>Local advertising alternatives</h4>
+            <p>An honest comparison of every local advertising option available in Canada.</p>
+          </div>
+          <div class="guide-card">
+            <h4>Arena demographics: who attends community hockey?</h4>
+            <p>Detailed demographic data on the audience inside Canadian community arenas.</p>
+          </div>
+          <div class="guide-card">
+            <h4>The rise of place-based advertising</h4>
+            <p>Why screens in venues are the fastest-growing segment of Canadian DOOH.</p>
           </div>
         </div>
-        <div class="article-card">
-          <div class="article-header">&#127919;</div>
-          <div class="article-body">
-            <h3>Why captive attention matters more than reach</h3>
-            <div class="article-meta">4 min read | Advertising strategy</div>
-            <p>In a world of endless scrolling, having your audience's genuine attention for 90 minutes is the ultimate competitive advantage.</p>
+      </div>
+
+      <div class="guides-category">
+        <h3>For venue owners</h3>
+        <div class="guides-grid">
+          <div class="guide-card">
+            <h4>How arenas can generate more revenue</h4>
+            <p>Practical revenue ideas beyond ice rentals — advertising, events, naming rights, and more.</p>
           </div>
-        </div>
-        <div class="article-card">
-          <div class="article-header">&#128200;</div>
-          <div class="article-body">
-            <h3>DOOH advertising: the complete guide for 2025</h3>
-            <div class="article-meta">8 min read | Getting started</div>
-            <p>Everything you need to know about digital out-of-home advertising, from creative best practices to measurement strategies.</p>
-          </div>
-        </div>
-        <div class="article-card">
-          <div class="article-header">&#127954;</div>
-          <div class="article-body">
-            <h3>The power of community sports venues</h3>
-            <div class="article-meta">6 min read | Research</div>
-            <p>New data reveals why families are spending more time at local arenas and recreation centers - and what it means for brands.</p>
+          <div class="guide-card">
+            <h4>Golf course revenue ideas: digital signage edition</h4>
+            <p>How digital screens create passive income for golf course clubhouses.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="case-studies" class="tab-content">
-    <div class="container" style="max-width: 1140px; margin: 0 auto;">
-      <div class="coming-soon">
-        <h3>Coming soon</h3>
-        <p style="font-size: 1.1rem; color: var(--gray-500);">We're compiling detailed case studies showcasing real results from our advertiser partners. Check back soon!</p>
-      </div>
+  <section class="case-studies-section">
+    <div class="container">
+      <h2>Case studies</h2>
+      <p>Real campaigns, real results from national brands and local businesses across the SDN network.</p>
+      <a href="/advertisers/case-studies/" class="btn-primary">View case studies</a>
     </div>
-  </div>
+  </section>
 
-  <div id="gallery" class="tab-content">
-    <div class="container" style="max-width: 1140px; margin: 0 auto;">
-      <h2 class="section-title" style="text-align: center;">Our network in action</h2>
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Our network in action</h2>
       <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop" alt="Hockey arena interior" class="gallery-img">
-        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=600&h=400&fit=crop" alt="Golf course clubhouse" class="gallery-img">
-        <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop" alt="Basketball arena" class="gallery-img">
-        <img src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=600&h=400&fit=crop" alt="Recreation center" class="gallery-img">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop" alt="Hockey arena interior" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=600&h=400&fit=crop" alt="Golf course clubhouse" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop" alt="Recreation center" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=600&h=400&fit=crop" alt="Sports complex" loading="lazy" />
+        </div>
       </div>
-      <p style="text-align: center; margin-top: 2rem; color: var(--gray-500);">Premium digital displays across Canada's busiest community venues</p>
+      <p class="gallery-caption">Premium digital displays across Canada's busiest community venues</p>
     </div>
-  </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to get started?</h2>
+    <p>Whether you're an advertiser looking to reach engaged audiences or a venue exploring partnership, we're here to help.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn-white">Contact us</a>
+      <a href="/resources/media-kit/" class="btn-outline-white">Download media kit</a>
+    </div>
+  </section>
 </BaseLayout>
 
-<script>
-  // Tab functionality
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 800px;
+    color: var(--gray-600, #495057);
+  }
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const tabName = button.getAttribute('data-tab');
+  .downloads-section {
+    padding: 5rem 1.5rem;
+  }
+  .downloads-section h2 {
+    margin-bottom: 2rem;
+  }
+  .downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  .download-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--gray-100);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.3s ease;
+  }
+  .download-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .download-icon {
+    flex-shrink: 0;
+    color: var(--blue);
+  }
+  .download-content h3 {
+    margin-bottom: 0.5rem;
+  }
+  .download-content p {
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  .link-text {
+    color: var(--blue);
+    font-weight: 600;
+  }
 
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      tabContents.forEach(content => content.classList.remove('active'));
+  .guides-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .guides-section h2 {
+    margin-bottom: 3rem;
+  }
+  .guides-category {
+    margin-bottom: 3rem;
+  }
+  .guides-category:last-child {
+    margin-bottom: 0;
+  }
+  .guides-category h3 {
+    margin-bottom: 1.5rem;
+    color: var(--blue);
+  }
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .guide-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .guide-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .guide-card p {
+    color: var(--gray-500);
+    margin: 0;
+    font-size: 0.9rem;
+  }
 
-      button.classList.add('active');
-      document.getElementById(tabName)?.classList.add('active');
-    });
-  });
-</script>
+  .case-studies-section {
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .case-studies-section h2 {
+    margin-bottom: 1rem;
+  }
+  .case-studies-section p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .btn-primary:hover {
+    background: #2589d0;
+  }
+
+  .gallery-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .gallery-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .gallery-caption {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--gray-500);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-outline-white {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-white:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+
+  @media (max-width: 768px) {
+    .downloads-grid {
+      grid-template-columns: 1fr;
+    }
+    .download-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
