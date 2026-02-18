@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Case Studies | Arena Advertising Success Stories | SDN"
+  description="Real campaigns, real results. See how national brands and local businesses have succeeded with arena advertising across the SDN network."
+  canonicalPath="/advertisers/case-studies/"
+>
+  <section class="page-hero">
+    <h1>Case studies</h1>
+    <p>Real campaigns, real results from the SDN network</p>
+  </section>
+
+  <section class="coming-soon-section">
+    <div class="container">
+      <div class="coming-soon-box">
+        <h2>Coming soon</h2>
+        <p>We're putting together detailed case studies showcasing successful campaigns from national brands and local businesses across our network.</p>
+        <p>In the meantime, contact us to learn how advertisers like yours have achieved their goals with arena advertising.</p>
+        <a href="/contact/" class="btn-primary">Get in touch</a>
+      </div>
+
+      <div class="preview-grid">
+        <div class="preview-card">
+          <img src="/images/arenas/arena-screen-01.jpg" alt="Arena advertising display" />
+          <div class="preview-content">
+            <h3>National brand campaigns</h3>
+            <p>How major brands reach millions of Canadians through coordinated multi-venue campaigns.</p>
+          </div>
+        </div>
+        <div class="preview-card">
+          <img src="/images/arenas/arena-screen-06.jpg" alt="Local business advertising" />
+          <div class="preview-content">
+            <h3>Local business success</h3>
+            <p>Stories of local businesses growing their customer base through community arena advertising.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Want to be our next success story?</h2>
+    <p>Contact us to learn how arena advertising can work for your brand.</p>
+    <a href="/contact/" class="btn-white">Request a proposal</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .coming-soon-section {
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .coming-soon-box {
+    background: var(--gray-100);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .coming-soon-box h2 {
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+  }
+
+  .coming-soon-box p {
+    color: var(--gray-500);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .coming-soon-box p:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #2589d0;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .preview-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+  }
+
+  .preview-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .preview-content {
+    padding: 1.5rem;
+  }
+
+  .preview-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .preview-content p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .preview-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .coming-soon-box {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
