@@ -56,9 +56,9 @@ const articleSchema = {
       </div>
     )}
 
-    <header class="article-header">
-      <div class="header-content">
-        <div class="article-meta">
+    <header class="blog-header">
+      <div class="blog-header-inner">
+        <div class="blog-breadcrumbs">
           <a href="/resources/" class="back-link">Resources</a>
           <span class="separator">/</span>
           <a href="/resources/blog/" class="back-link">Blog</a>
@@ -66,7 +66,7 @@ const articleSchema = {
           <span class="category">{category === 'advertisers' ? 'For advertisers' : 'For venue owners'}</span>
         </div>
         <h1><slot name="title" /></h1>
-        <p class="article-excerpt"><slot name="excerpt" /></p>
+        <p class="blog-excerpt"><slot name="excerpt" /></p>
       </div>
     </header>
 
@@ -122,23 +122,23 @@ const articleSchema = {
   }
 
   /* Header - clean white */
-  .article-header {
-    background: var(--white);
+  .blog-header {
+    background: #ffffff;
     padding: 2.5rem 1.5rem 2rem;
     border-bottom: 1px solid #e5e7eb;
   }
 
   /* When no hero image, add top margin */
-  .blog-article > .article-header:first-child {
+  .blog-article > .blog-header:first-child {
     margin-top: 70px;
   }
 
-  .header-content {
+  .blog-header-inner {
     max-width: 720px;
     margin: 0 auto;
   }
 
-  .article-meta {
+  .blog-breadcrumbs {
     margin-bottom: 1.5rem;
     font-size: 0.875rem;
     display: flex;
@@ -168,16 +168,16 @@ const articleSchema = {
     font-size: 0.875rem;
   }
 
-  .article-header h1 {
+  .blog-header h1 {
     font-size: 2.25rem;
     line-height: 1.25;
     margin: 0 0 1rem 0;
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--black);
+    color: #1a1a1a;
   }
 
-  .article-excerpt {
+  .blog-excerpt {
     font-size: 1.125rem;
     color: #4b5563;
     margin: 0;
@@ -392,20 +392,20 @@ const articleSchema = {
       margin-top: 60px;
     }
 
-    .article-header {
+    .blog-header {
       padding: 1.5rem 1.25rem;
     }
 
-    .blog-article > .article-header:first-child {
+    .blog-article > .blog-header:first-child {
       margin-top: 60px;
     }
 
-    .article-header h1 {
+    .blog-header h1 {
       font-size: 1.625rem;
       line-height: 1.3;
     }
 
-    .article-excerpt {
+    .blog-excerpt {
       font-size: 1rem;
     }
 
