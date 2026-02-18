@@ -35,7 +35,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     color: var(--dark);
     line-height: 1.7;
     font-size: 16px;
@@ -1011,7 +1011,7 @@ nav {
     padding: 0.85rem 1rem;
     border: 1px solid var(--gray-300);
     border-radius: 6px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     transition: var(--transition);
     background: var(--white);
