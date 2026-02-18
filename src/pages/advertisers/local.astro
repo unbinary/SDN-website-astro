@@ -25,8 +25,14 @@ const serviceSchema = {
   schema={serviceSchema}
 >
   <section class="page-hero">
-    <h1>Your neighbours spend 90 minutes a week at the arena. They should know your name.</h1>
+    <h1>Your neighbours spend 90 minutes a week at the arena.<br>They should know your name.</h1>
     <p>Local arena advertising puts your business in front of the families who live and spend in your community — affordably, repeatedly, and in an environment they trust.</p>
+  </section>
+
+  <section class="hero-image-section">
+    <div class="container">
+      <img src="/images/arenas/arena-screen-03.jpg" alt="Digital advertising screen in arena lobby" class="hero-img" />
+    </div>
   </section>
 
   <section class="intro-section">
@@ -221,6 +227,23 @@ const serviceSchema = {
 </BaseLayout>
 
 <style>
+  .hero-image-section {
+    padding: 0 1.5rem;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 10;
+  }
+  .hero-image-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hero-image-section .hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+
   .intro-section {
     padding: 4rem 1.5rem;
     background: var(--gray-100);
