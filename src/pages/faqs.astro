@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does arena advertising cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rates vary by market size, number of venues, campaign duration, and format. Contact us for a quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What creative specs do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Static images (1920x1080 px, JPG/PNG) and video (MP4, up to 15 seconds, 1080p). Our design team can produce creative at no extra charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is a typical campaign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Campaigns run in 4-week increments with a minimum 4-week commitment. Longer flights receive preferred rates."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Frequently Asked Questions | Arena Advertising | SDN"
+  description="Common questions about arena and venue advertising with Sports Digital Network. Learn about costs, creative specs, campaign length, targeting, and measurement."
+  canonicalPath="/faqs/"
+  schema={faqSchema}
+>
+  <section class="page-hero">
+    <h1>Frequently asked questions</h1>
+    <p>Everything you need to know about advertising with Sports Digital Network.</p>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-category">
+        <h2>Costs and pricing</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How much does arena advertising cost?</h3>
+            <p>Rates vary by market size, number of venues, campaign duration, and format. <a href="/contact/">Contact us for a quote</a>.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How much does it cost to advertise at a single arena?</h3>
+            <p>Local single-venue campaigns are our most affordable option, designed for small business budgets. Rates depend on the specific venue and your campaign length. Longer commitments get better rates.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2>Creative and production</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>What creative specs do you accept?</h3>
+            <p>Static images (1920x1080 px, JPG/PNG) and video (MP4, up to 15 seconds, 1080p). Our design team can produce creative at no extra charge.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need to provide my own ad design?</h3>
+            <p>No. Our design team creates your ad at no extra charge. Just send us your logo and the message you want to communicate.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I want to change my ad?</h3>
+            <p>You can update your creative at any time during your campaign. Seasonal promotions, new offers, or refreshed messaging — just send us the update and we'll have it live within 48 hours.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2>Campaigns and targeting</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How long is a typical campaign?</h3>
+            <p>Campaigns run in 4-week increments with a minimum 4-week commitment. Longer flights receive preferred rates.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How long should I run my campaign?</h3>
+            <p>We recommend a minimum of 12 weeks. Arena advertising builds recognition through repetition — the same families see your ad week after week. The longer you run, the stronger the recall.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I target specific venues?</h3>
+            <p>Yes. Select individual venues, groups of venues in a market, or activate across the entire national network.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I advertise at multiple arenas?</h3>
+            <p>Absolutely. Many local businesses advertise at 2-5 nearby venues to cover their entire service area. Multi-venue packages are available at reduced rates.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2>Measurement and reporting</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How is arena advertising measured?</h3>
+            <p>We report impressions based on verified venue foot traffic data. All screens provide proof-of-play confirmation.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I buy programmatically?</h3>
+            <p>Yes. We're integrated with Broadsign and available through major DSPs. Contact us for Deal IDs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2>Comparisons</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Is this better than sponsoring a local team?</h3>
+            <p>Team sponsorship gets your name on a jersey seen by one team's parents. Arena advertising puts your message in front of every person who walks into the building — across every sport, every age group, and every event. The reach is dramatically larger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Still have questions?</h2>
+    <p>Our team is happy to answer any questions about advertising with SDN.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn-white">Contact us</a>
+      <a href="/resources/" class="btn-outline">Download media kit</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .faq-section {
+    padding: 4rem 1.5rem;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .faq-category {
+    margin-bottom: 3rem;
+  }
+  .faq-category:last-child {
+    margin-bottom: 0;
+  }
+  .faq-category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--blue);
+  }
+  .faq-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .faq-item {
+    background: var(--gray-100);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--black);
+  }
+  .faq-item p {
+    color: var(--gray-500);
+    margin: 0;
+    line-height: 1.7;
+  }
+  .faq-item a {
+    color: var(--blue);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border: 2px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+</style>
