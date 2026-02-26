@@ -9,9 +9,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <section class="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Canada's sports venue advertising network</p>
-      <h1>Reach 3.6 million Canadians where they spend 90 minutes every week</h1>
-      <p class="hero-lead">Digital screens in 100+ hockey arenas and golf courses across Canada. Your ad plays to a captive, affluent audience — no skipping, no scrolling, no ad blockers.</p>
+      <p class="hero-eyebrow">Canada's premium digital out-of-home place-based network</p>
+      <h1>25 million impressions delivered monthly to Canadians where they spend 90+ minutes every week</h1>
+      <p class="hero-lead">Large format screens in 100+ community recreational facilities and golf courses across Canada. Your ad plays to a captive, affluent audience — no skipping, no scrolling, no ad blockers.</p>
       <div class="hero-buttons">
         <a href="/advertisers/" class="btn btn-primary">I want to advertise</a>
         <a href="/venues/" class="btn btn-secondary">I have a venue</a>
@@ -23,37 +23,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="stats-grid">
       <div class="stat">
         <span class="stat-number">100+</span>
-        <span class="stat-label">Community centres</span>
+        <span class="stat-label">Facilities</span>
       </div>
       <div class="stat">
-        <span class="stat-number">3.6M</span>
-        <span class="stat-label">Weekly visitors</span>
+        <span class="stat-number">50M</span>
+        <span class="stat-label">Annual visitors</span>
       </div>
       <div class="stat">
-        <span class="stat-number">90+</span>
-        <span class="stat-label">Minutes dwell time</span>
+        <span class="stat-number">6+ min</span>
+        <span class="stat-label">Lobby dwell time</span>
       </div>
       <div class="stat">
-        <span class="stat-number">35%</span>
-        <span class="stat-label">Above-average income</span>
+        <span class="stat-number">90+ min</span>
+        <span class="stat-label">Visit length</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">25M</span>
+        <span class="stat-label">Impressions/month</span>
       </div>
     </div>
   </section>
 
   <section class="two-ways">
     <div class="container">
-      <h2>Two ways we work together</h2>
+      <h2>Two groups we work with</h2>
       <div class="two-ways-grid">
         <a href="/advertisers/" class="way-card">
           <h3>For advertisers</h3>
-          <p>Reach families and high-income households in the places where they actually spend time — hockey arenas, golf courses, recreation centres.</p>
-          <p>National brands or local businesses. We have options for both.</p>
+          <p>Reach affluent families in the places where they actually spend time and gather. In community hubs.</p>
+          <p>National brands or local businesses. We have solutions for both.</p>
           <span class="card-link">Explore advertising <span class="arrow">&#8594;</span></span>
         </a>
         <a href="/venues/" class="way-card">
-          <h3>For venue owners</h3>
-          <p>Turn your arena lobbies, golf clubhouses, and hallways into revenue streams — without lifting a finger.</p>
-          <p>We install the screens, sell the ads, and send you a cheque every month.</p>
+          <h3>Facility management</h3>
+          <p>A turnkey opportunity to generate a revenue stream — without lifting a finger.</p>
+          <p>We purchase, install, manage and operate screens. You simply share in the revenue generated.</p>
           <span class="card-link">Become a partner <span class="arrow">&#8594;</span></span>
         </a>
       </div>
@@ -69,11 +73,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="value-card">
           <h3>Premium audience</h3>
-          <p>Hockey families and golfers have household incomes 35% above average. These are decision-makers with spending power.</p>
+          <p>Families in sport have household incomes 35% above average. These are decision-makers with spending power.</p>
         </div>
         <div class="value-card">
           <h3>Brand-safe environment</h3>
-          <p>Your ad appears alongside hockey games and family activities — not controversial content or clickbait.</p>
+          <p>Your ad appears alongside sports and family activities — not controversial content or clickbait.</p>
         </div>
       </div>
     </div>
@@ -85,7 +89,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="partners-grid">
         <div class="partner-card">
           <strong>ClubLink</strong>
-          <span>Canada's largest golf course owner — 24 Ontario locations</span>
+          <span>Canada's largest golf course owner — 26 Ontario locations</span>
         </div>
         <div class="partner-card">
           <strong>Canlan Sports</strong>
@@ -93,7 +97,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="partner-card">
           <strong>Nustadia Recreation</strong>
-          <span>Canada's largest operator of community arenas</span>
+          <span>Canada's largest operator of recreational facilities</span>
         </div>
       </div>
       <p class="partners-note">95% of our venues are multi-pad facilities — the biggest, busiest buildings in their communities.</p>
@@ -118,7 +122,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="step">
           <span class="step-number">3</span>
           <h3>Go live</h3>
-          <p>Your ad plays full-screen on 65" 4K displays throughout the venue. No clutter. No competition for attention.</p>
+          <p>Your ad plays full-screen on 65"–86" 4K displays throughout the venue. No clutter. No competition for attention.</p>
         </div>
         <div class="step">
           <span class="step-number">4</span>
@@ -196,11 +200,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 2.5rem 1.5rem;
   }
   .stats-bar .stats-grid {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
     text-align: center;
   }
   .stats-bar .stat-number {
@@ -431,7 +435,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   @media (max-width: 1024px) {
     .stats-bar .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
     .value-grid {
       grid-template-columns: 1fr;
