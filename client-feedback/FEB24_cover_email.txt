@@ -1,0 +1,32 @@
+SDN Site Copy Deck - Client Feedback Cover Email
+Date: February 24, 2025
+Document: SDN site copy deck FEB 24 Rev 3.docx
+
+=== COVER EMAIL FROM CLIENT ===
+
+Site Navigation:
+
+We want to add some pages to the site navigation, remove some of the drop-down sub-pages and have renamed a few of the navigation pages. Hence the first page shows the current navigation and requested revision - with changes in red.
+
+The only point remaining to be resolved is around the Advertisers page and sub/drop down navigation. Two opinions surround the Advertisers overview drop down sub page - specifically is the drop down "Overview" in Advertisers section required as it is the same page/content as the Advertisers main landing page - should we not just have two drop down pages - National Brands & Local Businesses? I have asked both you and Noah for a perspective here specifically.
+
+Mark thinks wise to leave as he feels some may look for an overview only - especially if hovering over menu vs clicking in directly - i think it is overkill but curious to hear from you and Noah - as i am not sure if it is wise to keep for better UX and navigation
+
+Copy changes:
+We have highlighted existing copy to be revised in red and crossed out copy to be changed as well, followed by updated copy
+
+Images:
+We have actually dropped in the preferred images where we want them to appear - all selected have been sent to you under separate cover from mark
+
+Consistencies:
+CTA's - found that CTA's going to same place - often were using different words when used on different pages - we tried to make these changes and catch them all - but if you could also look for these we would appreciate it
+
+Chart layouts - some charts from page to page are very similar and would suggest we carry a consistent visual approach through especially if similar content being communicated (but not crucial)
+
+Widow charts and Facts (on bar fact summaries):
+There are a few charts with widow copy boxes or fact bars with a widow fact on the following line. In case of charts - if for instance we have 3 columns & 2 rows but only for copy blocks - suggest we make these 2x2, in the case of facts - can we redo sizing or layout spacing to avoid a lone fact going to next line - if not possible and we have to lose a fact - just mark and i a note and we make a fact selection to lose
+
+Did not build copy deck for some pages not on site navigation:
+Some pages that were CTA destinations do not appear on menu site navigation (i.e. become a partner etc.) - this may be dumb question but where do these pages reside?
+If we keep them - can you get us links and CTA's under separate cover and i will build copy decks and proof these
+These pages have been identified in copy deck beside appropriate CTA
