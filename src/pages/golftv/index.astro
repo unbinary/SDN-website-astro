@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="GolfTV | Digital Advertising for Golf Course Clubhouses | SDN"
+  description="SDN installs digital advertising screens in golf course clubhouses, sells the ad space, and shares revenue with your course. You pay nothing."
+  canonicalPath="/golftv/"
+>
+  <section class="page-hero">
+    <h1>Your clubhouse visitors are worth more than you think</h1>
+    <p>SDN installs digital advertising screens in golf course clubhouses, sells the ad space, and shares the revenue with your course. You pay nothing.</p>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <p class="lead">Golf course clubhouses are one of the most under-monetized advertising environments in Canada.</p>
+      <p>Your members and guests spend 30-60 minutes in the clubhouse before and after their rounds — eating, drinking, socializing, waiting for tee times, and browsing the pro shop.</p>
+      <p>They're affluent, they're relaxed, and they're exactly the audience that premium brands want to reach. SDN helps you capture that value without any cost or effort from your team.</p>
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <div class="container">
+      <h2>Why partner with SDN for your clubhouse</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Zero cost to you</h3>
+          <p>We purchase, install, and maintain all equipment. You invest nothing.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Guaranteed revenue</h3>
+          <p>Monthly payments based on revenue sharing. Predictable income stream.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Premium content</h3>
+          <p>Golf scores, weather, news, and community content keeps eyes on the screen.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>No staff involvement</h3>
+          <p>Screens are managed remotely. Your team does nothing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience-section">
+    <div class="container">
+      <h2>The golf course audience</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">30-60</span>
+          <span class="stat-label">Minutes in clubhouse per visit</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">35%</span>
+          <span class="stat-label">Above average household income</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Golf courses in our network</span>
+        </div>
+      </div>
+      <p class="note">Golf course visitors represent one of the most affluent, brand-receptive audiences in Canada.</p>
+    </div>
+  </section>
+
+  <section class="clublink-section">
+    <div class="container">
+      <div class="clublink-card">
+        <h2>ClubLinkTV</h2>
+        <p>Interested in advertising at ClubLink courses across Ontario? We can help.</p>
+        <a href="/golftv/clublinktv/" class="btn btn-primary">Learn more about ClubLinkTV</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Add digital advertising revenue to your clubhouse</h2>
+    <p>Contact us to learn how SDN can turn your clubhouse into a revenue stream.</p>
+    <a href="/contact/" class="btn-white">Contact us</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .intro-section p {
+    color: var(--gray-600, #495057);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-bottom: 1rem;
+  }
+
+  .benefits-section {
+    padding: 5rem 1.5rem;
+  }
+  .benefits-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .benefit-card {
+    background: var(--gray-100);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--blue);
+  }
+  .benefit-card h3 {
+    margin-bottom: 0.75rem;
+  }
+  .benefit-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .audience-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .audience-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .stat-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .stat-card .stat-number {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .stat-card .stat-label {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+  }
+  .note {
+    text-align: center;
+    color: var(--gray-500);
+    font-style: italic;
+  }
+
+  .clublink-section {
+    padding: 5rem 1.5rem;
+  }
+  .clublink-card {
+    background: linear-gradient(135deg, var(--black) 0%, #1a2a3a 100%);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .clublink-card h2 {
+    margin-bottom: 1rem;
+  }
+  .clublink-card p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+  .clublink-card .btn {
+    background: var(--white);
+    color: var(--black);
+  }
+</style>

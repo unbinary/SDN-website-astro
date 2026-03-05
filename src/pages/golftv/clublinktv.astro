@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="ClubLinkTV | Advertising at ClubLink Golf Courses | SDN"
+  description="Advertise at ClubLink courses across Ontario through SDN's digital screen network. Reach affluent golf course members and guests."
+  canonicalPath="/golftv/clublinktv/"
+>
+  <section class="page-hero">
+    <h1>ClubLinkTV</h1>
+    <p>Digital advertising at Canada's largest private golf course network.</p>
+  </section>
+
+  <section class="coming-soon">
+    <div class="container">
+      <div class="coming-soon-card">
+        <h2>Details coming soon</h2>
+        <p>If you are interested in advertising at ClubLink courses across Ontario, we can help.</p>
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-number">26</span>
+            <span class="stat-label">ClubLink courses in Ontario</span>
+          </div>
+        </div>
+        <a href="/contact/" class="btn btn-primary">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Interested in ClubLink advertising?</h2>
+    <p>Contact our team to discuss advertising opportunities at ClubLink courses.</p>
+    <a href="/contact/" class="btn-white">Contact us</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .coming-soon {
+    padding: 5rem 1.5rem;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .coming-soon-card {
+    background: var(--gray-100);
+    padding: 4rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .coming-soon-card h2 {
+    margin-bottom: 1rem;
+    color: var(--blue);
+  }
+  .coming-soon-card p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .stat {
+    background: var(--white);
+    padding: 1.5rem 3rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+  }
+  .stat-label {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+  }
+</style>

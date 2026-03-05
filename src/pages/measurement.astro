@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Audience Measurement & Verification | SDN"
+  description="How SDN measures and verifies arena advertising audiences. People counters, Bluetooth mapping, demographic data, and attribution modeling."
+  canonicalPath="/measurement/"
+>
+  <section class="page-hero">
+    <h1>Audience verification</h1>
+    <p>To accurately gauge facility audience size and impression counts, SDN employs three strategies.</p>
+  </section>
+
+  <section class="methods-section">
+    <div class="container">
+      <div class="methods-grid">
+        <div class="method-card">
+          <span class="method-number">1</span>
+          <h3>People counter data sourced from multiple venues</h3>
+          <p>Measures hourly visitor counts entering and leaving each facility.</p>
+        </div>
+        <div class="method-card">
+          <span class="method-number">2</span>
+          <h3>Exclusive audience data</h3>
+          <p>Proprietary audience data curated through third-party audits conducted by Pelmorex.</p>
+        </div>
+        <div class="method-card">
+          <span class="method-number">3</span>
+          <h3>Opto-Radio Bluetooth mapping</h3>
+          <p>SDN deploys a network of strategically placed Bluetooth beacon devices within each arena.</p>
+          <ul>
+            <li>Three Bluetooth beacons are installed in key locations per venue</li>
+            <li>Resulting data is analyzed to build hourly impression models for each facility</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mapping-section">
+    <div class="container">
+      <h2>Mapping</h2>
+      <p>We use proprietary mapping software to help clients optimize location strategy. This includes:</p>
+      <div class="features-grid">
+        <div class="feature">Competitor proximity</div>
+        <div class="feature">Distance analysis</div>
+        <div class="feature">Drive-time modeling</div>
+        <div class="feature">Coverage evaluation</div>
+        <div class="feature">"Hot zone" analysis</div>
+      </div>
+      <p class="note">We match facility traffic with nearby retail traffic patterns to identify high-value opportunities.</p>
+    </div>
+  </section>
+
+  <section class="data-section">
+    <div class="container">
+      <h2>Arima Data</h2>
+      <p>We leverage the intelligence of Arima Data's platform, which aggregates 25 trusted data sources. This enables us to:</p>
+      <ul class="data-list">
+        <li>Build robust demographic audiences (similar to Vividata)</li>
+        <li>Perform cross-media optimization</li>
+        <li>Apply advanced location intelligence</li>
+      </ul>
+      <p>All to ensure we deliver sophisticated, trusted strategies to our clients.</p>
+    </div>
+  </section>
+
+  <section class="journey-section">
+    <div class="container">
+      <h2>Our user journey</h2>
+      <p>We partner with Applied Post, a third-party provider with access to 40 million mobile devices. We have geo-fenced:</p>
+      <div class="stats-row">
+        <div class="stat-box">
+          <span class="stat-number">750</span>
+          <span class="stat-label">Community sports properties</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">150</span>
+          <span class="stat-label">Golf courses</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Points of interest tracked</span>
+        </div>
+      </div>
+      <p>We track visitor movement and index behavioural patterns by matching travel activity to these destinations.</p>
+      <p>We can also determine visit frequency, daypart, dwell time, and length of stay. From this foundation, we build attribution models that demonstrate the effectiveness of each campaign.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Learn more about our measurement capabilities</h2>
+    <p>Contact our team to discuss how we measure and verify your campaign performance.</p>
+    <a href="/contact/" class="btn-white">Contact us</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .methods-section {
+    padding: 4rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .method-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--blue);
+  }
+  .method-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .method-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .method-card p {
+    color: var(--gray-500);
+    margin: 0;
+  }
+  .method-card ul {
+    margin: 1rem 0 0 0;
+    padding-left: 1.25rem;
+    color: var(--gray-500);
+  }
+  .method-card li {
+    margin-bottom: 0.5rem;
+  }
+
+  .mapping-section {
+    padding: 5rem 1.5rem;
+  }
+  .mapping-section h2 {
+    margin-bottom: 1rem;
+  }
+  .mapping-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .feature {
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .note {
+    color: var(--gray-500);
+    font-style: italic;
+  }
+
+  .data-section {
+    padding: 5rem 1.5rem;
+    background: var(--gray-100);
+  }
+  .data-section h2 {
+    margin-bottom: 1rem;
+  }
+  .data-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+  }
+  .data-list {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 0 0 1.5rem 0;
+    list-style: none;
+  }
+  .data-list li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    border-bottom: 1px solid var(--gray-200, #e9ecef);
+  }
+  .data-list li:last-child {
+    border-bottom: none;
+  }
+  .data-list li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  .journey-section {
+    padding: 5rem 1.5rem;
+  }
+  .journey-section h2 {
+    margin-bottom: 1rem;
+  }
+  .journey-section > .container > p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+  }
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .stat-box {
+    background: var(--blue);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .stat-box .stat-number {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .stat-box .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+</style>
