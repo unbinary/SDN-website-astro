@@ -281,7 +281,7 @@ const faqSchema = {
   }
   .factors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
   .factor-card {
@@ -373,7 +373,7 @@ const faqSchema = {
   }
   .included-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -407,7 +407,7 @@ const faqSchema = {
   }
   .compare-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
   .compare-card {
@@ -434,7 +434,7 @@ const faqSchema = {
   }
   .value-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
   .value-item {
@@ -458,7 +458,7 @@ const faqSchema = {
   }
   .faq-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -473,7 +473,25 @@ const faqSchema = {
     font-size: 0.95rem;
   }
 
+  @media (max-width: 1024px) {
+    .included-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 768px) {
+    .factors-grid {
+      grid-template-columns: 1fr;
+    }
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+    .compare-grid {
+      grid-template-columns: 1fr;
+    }
+    .value-grid {
+      grid-template-columns: 1fr;
+    }
     .faq-grid {
       grid-template-columns: 1fr;
     }

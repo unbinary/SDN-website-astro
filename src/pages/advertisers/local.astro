@@ -306,7 +306,7 @@ const serviceSchema = {
   }
   .steps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
   .step {
@@ -346,7 +346,7 @@ const serviceSchema = {
   }
   .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
   .category-card {
@@ -396,7 +396,7 @@ const serviceSchema = {
   }
   .faq-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -414,7 +414,19 @@ const serviceSchema = {
     color: var(--blue);
   }
 
+  @media (max-width: 1024px) {
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 768px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
     .faq-grid {
       grid-template-columns: 1fr;
     }

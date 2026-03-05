@@ -189,7 +189,7 @@ const orgSchema = {
   }
   .options-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
   .option-card {
@@ -359,6 +359,9 @@ const orgSchema = {
   }
 
   @media (max-width: 768px) {
+    .options-grid {
+      grid-template-columns: 1fr;
+    }
     .form-layout {
       grid-template-columns: 1fr;
       gap: 2rem;
