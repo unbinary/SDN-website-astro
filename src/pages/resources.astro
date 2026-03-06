@@ -94,34 +94,6 @@ const webPageSchema = {
           </div>
         </div>
 
-        <aside class="sidebar">
-          <div class="sidebar-card">
-            <div class="sidebar-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="12" y1="18" x2="12" y2="12"></line>
-                <line x1="9" y1="15" x2="12" y2="18"></line>
-                <line x1="15" y1="15" x2="12" y2="18"></line>
-              </svg>
-            </div>
-            <h3>Media kit</h3>
-            <p>Network overview, demographics, venue list, specs, and rates.</p>
-            <a href="/resources/media-kit/" class="sidebar-btn">Download PDF</a>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Case studies</h3>
-            <p>Real campaigns, real results from brands across the SDN network.</p>
-            <a href="/advertisers/case-studies/" class="sidebar-link">View case studies</a>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Get a quote</h3>
-            <p>Custom proposal for your campaign or venue partnership.</p>
-            <a href="/contact/" class="sidebar-link">Contact us</a>
-          </div>
-        </aside>
       </div>
     </div>
   </section>
@@ -150,10 +122,7 @@ const webPageSchema = {
   <section class="cta">
     <h2>Ready to get started?</h2>
     <p>Whether you're an advertiser looking to reach engaged audiences or a venue exploring partnership, we're here to help.</p>
-    <div class="cta-buttons">
-      <a href="/contact/" class="btn-white">Contact us</a>
-      <a href="/resources/media-kit/" class="btn-outline-white">Download media kit</a>
-    </div>
+    <a href="/contact/" class="btn-white">Contact us</a>
   </section>
 </BaseLayout>
 
@@ -170,7 +139,7 @@ const webPageSchema = {
   }
   .content-grid {
     display: grid;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 1fr;
     gap: 3rem;
     align-items: start;
   }
