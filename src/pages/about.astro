@@ -6,7 +6,7 @@ const orgSchema = {
   "@type": "Organization",
   "name": "Sports Digital Network",
   "url": "https://sdnetwork.ca",
-  "description": "Canada's largest digital out-of-home network in community sports venues. 100+ facilities. 3.6M weekly visitors.",
+  "description": "Canada's largest digital out-of-home network in community sports venues. 100+ facilities. 25M weekly impressions.",
   "foundingDate": "2022",
   "address": {
     "@type": "PostalAddress",
@@ -24,7 +24,7 @@ const orgSchema = {
 
 <BaseLayout
   title="About Sports Digital Network | Canada's DOOH Leader | SDN"
-  description="Sports Digital Network is Canada's largest digital out-of-home network in community sports venues. 100+ facilities. 3.6M weekly visitors. Founded 2022."
+  description="Sports Digital Network is Canada's largest digital out-of-home network in community sports venues. 100+ facilities. 25M weekly impressions."
   canonicalPath="/about/"
   schema={orgSchema}
 >
@@ -35,7 +35,7 @@ const orgSchema = {
 
   <section class="story-section">
     <div class="container">
-      <p class="lead">Sports Digital Network was founded in 2022 with a straightforward idea: Canadians spend more engaged time in community arenas, recreation centres, and golf courses than almost anywhere else — and that time has real value for advertisers.</p>
+      <p class="lead">Sports Digital Network was founded with a straightforward idea: Canadians spend more engaged time in community arenas, recreation centres, and golf courses than almost anywhere else — and that time has real value for advertisers.</p>
       <p>We've built Canada's largest digital out-of-home network focused exclusively on community sports venues. Our screens are in the busiest multi-pad arenas, the most active recreation centres, and the most prestigious private golf courses in the country.</p>
       <p>Every venue was chosen because it's the biggest, busiest building in its community — the kind of place where tens of thousands of local residents pass through every month.</p>
     </div>
@@ -65,27 +65,23 @@ const orgSchema = {
       <div class="stats-grid">
         <div class="stat-item">
           <span class="stat-number">100+</span>
-          <span class="stat-label">premium venues from Vancouver to Halifax</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">3.6M</span>
-          <span class="stat-label">weekly visitors across the network</span>
+          <span class="stat-label">Premium venues from Vancouver to Halifax</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">25M</span>
-          <span class="stat-label">weekly impressions</span>
+          <span class="stat-label">Weekly impressions</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">90+</span>
-          <span class="stat-label">minutes average visitor dwell time</span>
+          <span class="stat-label">Minutes average visitor dwell time</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">65"–86"</span>
+          <span class="stat-number">65" – 86"</span>
           <span class="stat-label">4K commercial-grade displays</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">95%</span>
-          <span class="stat-label">of venues are multi-pad or multi-sport facilities</span>
+          <span class="stat-label">Of venues are multi-pad or multi-sport facilities</span>
         </div>
       </div>
     </div>
@@ -94,7 +90,7 @@ const orgSchema = {
   <section class="partners-section">
     <div class="container">
       <h2>Our venue partners</h2>
-      <p>We operate in partnership with two of Canada's most established venue operators:</p>
+      <p>We operate in partnership with three of Canada's most established venue operators:</p>
 
       <div class="partners-grid">
         <div class="partner-card">
@@ -103,7 +99,7 @@ const orgSchema = {
         </div>
         <div class="partner-card">
           <h3>Nustadia Recreation</h3>
-          <p>Canada's largest operator of community recreational facilities. Nustadia manages multi-pad complexes and recreation centres in markets across the country.</p>
+          <p>Canada's largest operator of community recreational facilities.</p>
         </div>
       </div>
 
@@ -119,7 +115,7 @@ const orgSchema = {
       <div class="expertise-grid">
         <div class="expertise-card">
           <h3>Media and agency experience</h3>
-          <p>Our team includes former media agency planners who understand how national brands and agencies buy media, evaluate DOOH, and measure campaign effectiveness.</p>
+          <p>Our team includes former agency executives who understand how brands/agencies buy media, evaluate DOOH, and measure campaign effectiveness.</p>
         </div>
         <div class="expertise-card">
           <h3>Sports marketing</h3>
@@ -164,14 +160,6 @@ const orgSchema = {
       </div>
 
       <p>All screens are connected to our network via dedicated internet connections, monitored 24/7 for uptime and performance.</p>
-    </div>
-  </section>
-
-  <section class="namg-section">
-    <div class="container">
-      <h2>National Arena Marketing Group (NAMG)</h2>
-      <p>SDN is a member of the <strong>National Arena Marketing Group (NAMG)</strong>, a national consortium of leading community venue advertising companies. NAMG partners include Sport-Media Marketing (Quebec), FutureSign Multimedia (Ontario), Visual Sports Image (VSI), and Nustadia Recreation.</p>
-      <p>Through NAMG, advertisers can access 800+ arenas and sports complexes across all provinces, creating the largest community venue advertising network in Canada. SDN brings the digital DOOH component to this consortium, complementing the static media capabilities of our NAMG partners.</p>
     </div>
   </section>
 
@@ -261,7 +249,7 @@ const orgSchema = {
   }
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     text-align: center;
   }
@@ -379,20 +367,6 @@ const orgSchema = {
     font-size: 0.95rem;
   }
 
-  .namg-section {
-    padding: 5rem 1.5rem;
-    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
-    color: var(--white);
-  }
-  .namg-section h2 {
-    margin-bottom: 1.5rem;
-  }
-  .namg-section p {
-    opacity: 0.9;
-    margin-bottom: 1rem;
-    max-width: 900px;
-  }
-
   .contact-section {
     padding: 5rem 1.5rem;
   }
@@ -414,7 +388,7 @@ const orgSchema = {
 
   @media (max-width: 1024px) {
     .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
     .expertise-grid {
       grid-template-columns: 1fr;
@@ -425,6 +399,12 @@ const orgSchema = {
     .audience-grid {
       grid-template-columns: 1fr;
     }
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
     .stats-grid {
       grid-template-columns: 1fr;
     }

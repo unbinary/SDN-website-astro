@@ -10,11 +10,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="hero">
     <div class="hero-content">
       <p class="hero-eyebrow">Canada's premium digital out-of-home place-based network</p>
-      <h1>25 million impressions delivered monthly to Canadians where they spend 90+ minutes every week</h1>
-      <p class="hero-lead">Large format screens in 100+ community recreational facilities and golf courses across Canada. Your ad plays to a captive, affluent audience — no skipping, no scrolling, no ad blockers.</p>
+      <h1>Reach active families and adults where they spend time</h1>
+      <p class="hero-lead">Full-screen digital ads inside Canada's busiest hockey arenas, multi-sport facilities, and private golf clubs — where visitors spend 90+ minutes per visit.</p>
+      <p class="hero-subtext">No scrolling. No skipping. No ad blockers. No second screen distraction.</p>
       <div class="hero-buttons">
-        <a href="/advertisers/" class="btn btn-primary">I want to advertise</a>
-        <a href="/venues/" class="btn btn-secondary">I have a venue</a>
+        <a href="/advertisers/" class="btn btn-primary">Advertise with SDN</a>
+        <a href="/venues/" class="btn btn-secondary">Bring SDN to my venue</a>
       </div>
     </div>
   </section>
@@ -23,14 +24,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="stats-grid">
       <div class="stat">
         <span class="stat-number">100+</span>
-        <span class="stat-label">Facilities</span>
+        <span class="stat-label">Community facilities</span>
       </div>
       <div class="stat">
         <span class="stat-number">50M</span>
         <span class="stat-label">Annual visitors</span>
       </div>
       <div class="stat">
-        <span class="stat-number">6+ min</span>
+        <span class="stat-number">6:00+ min</span>
         <span class="stat-label">Lobby dwell time</span>
       </div>
       <div class="stat">
@@ -39,7 +40,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div class="stat">
         <span class="stat-number">25M</span>
-        <span class="stat-label">Impressions/month</span>
+        <span class="stat-label">Impressions/week</span>
       </div>
     </div>
   </section>
@@ -93,7 +94,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="partner-card">
           <strong>Nustadia Recreation</strong>
-          <span>Canada's largest operator of recreational facilities</span>
+          <span>Canada's largest operator of community recreational facilities</span>
         </div>
       </div>
       <p class="partners-note">95% of our venues are multi-pad facilities — the biggest, busiest buildings in their communities.</p>
@@ -132,7 +133,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="cta">
     <div class="cta-content">
       <h2>Ready to get started?</h2>
-      <p>Tell us about your advertising goals or your venue — we'll be in touch within one business day.</p>
+      <p>Tell us about your advertising goals or your venue — we'll be in touch.</p>
       <a href="/contact/" class="btn-white">Contact us</a>
     </div>
   </section>
@@ -166,9 +167,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .hero-lead {
     font-size: 1.15rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     opacity: 0.9;
     line-height: 1.7;
+  }
+  .hero-subtext {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+    font-weight: 500;
   }
   .hero-buttons {
     display: flex;

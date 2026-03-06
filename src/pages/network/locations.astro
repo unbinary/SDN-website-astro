@@ -41,16 +41,16 @@ const localBusinessSchema = {
         <span class="stat-label">Venues</span>
       </div>
       <div class="stat">
-        <span class="stat-number">3.6M</span>
-        <span class="stat-label">Weekly visitors</span>
+        <span class="stat-number">50M</span>
+        <span class="stat-label">Annual visitors</span>
       </div>
       <div class="stat">
-        <span class="stat-number">95%</span>
-        <span class="stat-label">Multi-pad facilities</span>
+        <span class="stat-number">25M</span>
+        <span class="stat-label">Weekly impressions delivered</span>
       </div>
       <div class="stat">
-        <span class="stat-number">6</span>
-        <span class="stat-label">Provinces</span>
+        <span class="stat-number">10,000</span>
+        <span class="stat-label">Ad plays/month in each facility</span>
       </div>
     </div>
   </section>
@@ -62,7 +62,7 @@ const localBusinessSchema = {
         <div class="type-card">
           <div class="type-icon">&#127954;</div>
           <h3>Community arenas</h3>
-          <p>Multi-pad hockey arenas and recreation complexes with 2-4 ice pads, spectator seating, and high-traffic lobbies. Partners include Nustadia Recreation facilities.</p>
+          <p>Multi-pad hockey arenas and recreation complexes with 2-4 ice pads, spectator seating, and high-traffic lobbies.</p>
         </div>
         <div class="type-card">
           <div class="type-icon">&#9971;</div>
@@ -108,17 +108,22 @@ const localBusinessSchema = {
         <div class="region-card region-ontario">
           <div class="region-header">
             <h3>Ontario</h3>
-            <span class="region-tag">Largest coverage</span>
           </div>
-          <p>GTA, Ottawa, Hamilton, Kitchener-Waterloo, London, Brantford, Oshawa, Barrie, and surrounding communities.</p>
           <div class="venue-list">
-            <span>Toronto Pan Am Sports Centre</span>
-            <span>Cavanagh Sensplex</span>
-            <span>Wayne Gretzky Sports Centre</span>
-            <span>Sixteen Mile Sports Complex</span>
-            <span>Western Fair Sports Centre</span>
-            <span>Mohawk 4 Ice Centre</span>
-            <span>26 ClubLink courses</span>
+            <span>London</span>
+            <span>Komoka</span>
+            <span>Guelph</span>
+            <span>Hamilton</span>
+            <span>Brantford</span>
+            <span>St. Catharines</span>
+            <span>Niagara Falls</span>
+            <span>Burlington</span>
+            <span>Oakville</span>
+            <span>Toronto</span>
+            <span>Markham</span>
+            <span>Scarborough</span>
+            <span>Vaughan</span>
+            <span>Oshawa</span>
           </div>
         </div>
 
@@ -126,13 +131,13 @@ const localBusinessSchema = {
           <div class="region-header">
             <h3>Western Canada</h3>
           </div>
-          <p>BC, Alberta, and Saskatchewan including Vancouver-area, Calgary-area, Regina, and Saskatoon.</p>
           <div class="venue-list">
-            <span>Pitt Meadows Arena Complex</span>
-            <span>Spray Lakes Sawmills Centre</span>
-            <span>Co-operators Centre</span>
-            <span>Merlis Belsher Place</span>
-            <span>Grande Prairie Sportsplex</span>
+            <span>Vancouver</span>
+            <span>Calgary</span>
+            <span>Edmonton</span>
+            <span>Grand Prairie</span>
+            <span>Regina</span>
+            <span>Winnipeg</span>
           </div>
         </div>
 
@@ -140,20 +145,12 @@ const localBusinessSchema = {
           <div class="region-header">
             <h3>Atlantic Canada</h3>
           </div>
-          <p>Nova Scotia and New Brunswick serving Halifax, Moncton, and surrounding communities.</p>
           <div class="venue-list">
-            <span>BMO Centre (Halifax)</span>
-            <span>Red Ball Internet Centre</span>
+            <span>Moncton</span>
+            <span>Halifax</span>
+            <span>Dartmouth</span>
+            <span>Charlottetown</span>
           </div>
-        </div>
-
-        <div class="region-card region-quebec">
-          <div class="region-header">
-            <h3>Quebec</h3>
-            <span class="region-tag">Coming soon</span>
-          </div>
-          <p>Quebec strategy in development through our NAMG partnership with Sport-Media Marketing, covering 89% of arenas in the province.</p>
-          <a href="/contact/" class="region-link">Contact us for Quebec campaigns</a>
         </div>
       </div>
     </div>
@@ -173,7 +170,7 @@ const localBusinessSchema = {
     <div class="cta-content">
       <h2>Own a venue? Join our network.</h2>
       <p>Add digital advertising revenue to your arena, golf course, or recreation centre.</p>
-      <a href="/venues/apply/" class="btn-white">Apply to become a partner</a>
+      <a href="/contact/" class="btn-white">Contact</a>
     </div>
   </section>
 </BaseLayout>
@@ -291,39 +288,12 @@ const localBusinessSchema = {
   .region-card.region-ontario {
     border-left-color: var(--blue);
   }
-  .region-card.region-quebec {
-    border-left-color: var(--gray-400);
-    background: var(--gray-100);
-  }
   .region-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
     margin-bottom: 0.75rem;
   }
   .region-header h3 {
     margin: 0;
     font-size: 1.25rem;
-  }
-  .region-tag {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--blue);
-    background: var(--blue-light, #e8f4fd);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-  }
-  .region-quebec .region-tag {
-    color: var(--gray-500);
-    background: var(--gray-200);
-  }
-  .region-card > p {
-    color: var(--gray-500);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
   }
   .venue-list {
     display: flex;
@@ -336,16 +306,6 @@ const localBusinessSchema = {
     border-radius: 4px;
     font-size: 0.8rem;
     color: var(--gray-600);
-  }
-  .region-quebec .venue-list span {
-    background: var(--gray-200);
-  }
-  .region-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: var(--blue);
-    font-weight: 600;
-    font-size: 0.9rem;
   }
 
   .request-section {
