@@ -215,20 +215,34 @@ nav {
 
 /* Page Hero (for inner pages) */
 .page-hero {
-    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/ice-sdn.jpeg');
+    background-size: cover;
+    background-position: center;
     padding: 140px 2rem 80px;
     text-align: center;
     color: var(--white);
 }
 
-.page-hero h1 {
+/* Golf Page Hero (no arena image) */
+.page-hero-golf {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    background-size: cover;
+    background-position: center;
+    padding: 140px 2rem 80px;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-hero h1,
+.page-hero-golf h1 {
     font-size: clamp(2.2rem, 5vw, 3rem);
     color: var(--white);
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
-.page-hero p {
+.page-hero p,
+.page-hero-golf p {
     font-size: 1.15rem;
     opacity: 0.85;
     max-width: 600px;
@@ -1226,7 +1240,8 @@ footer {
         padding: 120px 1.5rem 60px;
     }
 
-    .page-hero {
+    .page-hero,
+    .page-hero-golf {
         padding: 120px 1.5rem 60px;
     }
 
