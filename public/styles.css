@@ -223,9 +223,9 @@ nav {
     color: var(--white);
 }
 
-/* Golf Page Hero (no arena image) */
+/* Golf Page Hero */
 .page-hero-golf {
-    background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/golf-hero.png');
     background-size: cover;
     background-position: center;
     padding: 140px 2rem 80px;
