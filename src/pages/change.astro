@@ -39,13 +39,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+  /* Hide nav on password screen */
+  :global(nav) {
+    display: none;
+  }
+  :global(body.authenticated nav) {
+    display: block;
+  }
   .password-gate {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--gray-100);
-    padding-top: 80px;
+    padding-top: 0;
   }
   .password-box {
     background: var(--white);
@@ -108,6 +115,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   if (sessionStorage.getItem('change-auth') === 'true') {
     document.getElementById('password-gate')?.classList.add('hidden');
     document.getElementById('protected-content')?.classList.remove('hidden');
+    document.body.classList.add('authenticated');
   }
 
   document.getElementById('password-submit')?.addEventListener('click', checkPassword);
@@ -121,6 +129,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       sessionStorage.setItem('change-auth', 'true');
       document.getElementById('password-gate')?.classList.add('hidden');
       document.getElementById('protected-content')?.classList.remove('hidden');
+      document.body.classList.add('authenticated');
     } else {
       document.getElementById('password-error')!.textContent = 'Incorrect password';
     }
