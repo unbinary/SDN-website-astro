@@ -38,14 +38,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 </BaseLayout>
 
+<style is:global>
+  /* Hide nav and footer on password screen */
+  nav, footer {
+    display: none !important;
+  }
+  body.authenticated nav,
+  body.authenticated footer {
+    display: block !important;
+  }
+</style>
+
 <style>
-  /* Hide nav on password screen */
-  :global(nav) {
-    display: none;
-  }
-  :global(body.authenticated nav) {
-    display: block;
-  }
   .password-gate {
     min-height: 100vh;
     display: flex;
