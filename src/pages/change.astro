@@ -1,141 +1,154 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+// Standalone page - no BaseLayout to avoid nav/footer
 ---
 
-<BaseLayout
-  title="Submit Changes | SDN"
-  description="Submit website change requests"
-  canonicalPath="/change/"
->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Changes | SDN</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #0066cc;
+      --blue-dark: #0052a3;
+      --gray-100: #f8f9fa;
+      --gray-200: #e9ecef;
+      --white: #ffffff;
+      --black: #1a1a2e;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--gray-100);
+    }
+    .password-gate {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .password-box {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    .password-box h2 {
+      margin-bottom: 1.5rem;
+      color: var(--black);
+    }
+    .password-box input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .password-box button {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .password-box button:hover {
+      background: var(--blue-dark);
+    }
+    .error {
+      color: red;
+      margin-top: 1rem;
+    }
+    .hidden {
+      display: none;
+    }
+    .form-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--black);
+    }
+    .form-container p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #666;
+    }
+    iframe {
+      border: none;
+      border-radius: 8px;
+      background: var(--white);
+    }
+  </style>
+</head>
+<body>
   <div id="password-gate" class="password-gate">
     <div class="password-box">
       <h2>Password required</h2>
-      <input type="password" id="password-input" placeholder="Enter password" />
+      <input type="password" id="password-input" placeholder="Enter password" autofocus>
       <button id="password-submit">Submit</button>
       <p id="password-error" class="error"></p>
     </div>
   </div>
 
   <div id="protected-content" class="hidden">
-    <section class="page-hero">
+    <div class="form-container">
       <h1>Submit a change request</h1>
       <p>Use the form below to request updates to website content.</p>
-    </section>
-
-    <section class="form-section">
-      <div class="container">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdABn5tKaAb1UZ23kPr9bGr5te5ZRAKxR3aBYA2wt2XHe-mNg/viewform?embedded=true"
-          width="100%"
-          height="800"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0">
-          Loading...
-        </iframe>
-      </div>
-    </section>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdABn5tKaAb1UZ23kPr9bGr5te5ZRAKxR3aBYA2wt2XHe-mNg/viewform?embedded=true"
+        width="100%"
+        height="900"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0">
+        Loading...
+      </iframe>
+    </div>
   </div>
-</BaseLayout>
 
-<style is:global>
-  /* Hide nav and footer on password screen */
-  nav, footer {
-    display: none !important;
-  }
-  body.authenticated nav,
-  body.authenticated footer {
-    display: block !important;
-  }
-</style>
+  <script>
+    const PASSWORD = 'sdn2026';
 
-<style>
-  .password-gate {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gray-100);
-    padding-top: 0;
-  }
-  .password-box {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-  }
-  .password-box h2 {
-    margin-bottom: 1.5rem;
-  }
-  .password-box input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid var(--gray-200);
-    border-radius: 6px;
-    margin-bottom: 1rem;
-  }
-  .password-box button {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    background: var(--blue);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .password-box button:hover {
-    background: var(--blue-dark);
-  }
-  .error {
-    color: red;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-  .hidden {
-    display: none;
-  }
-  .form-section {
-    padding: 3rem 1.5rem 5rem;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  iframe {
-    border: none;
-    border-radius: 8px;
-  }
-</style>
-
-<script>
-  const PASSWORD = 'sdn2026';
-
-  // Check if already authenticated
-  if (sessionStorage.getItem('change-auth') === 'true') {
-    document.getElementById('password-gate')?.classList.add('hidden');
-    document.getElementById('protected-content')?.classList.remove('hidden');
-    document.body.classList.add('authenticated');
-  }
-
-  document.getElementById('password-submit')?.addEventListener('click', checkPassword);
-  document.getElementById('password-input')?.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') checkPassword();
-  });
-
-  function checkPassword() {
-    const input = document.getElementById('password-input') as HTMLInputElement;
-    if (input?.value === PASSWORD) {
-      sessionStorage.setItem('change-auth', 'true');
-      document.getElementById('password-gate')?.classList.add('hidden');
-      document.getElementById('protected-content')?.classList.remove('hidden');
-      document.body.classList.add('authenticated');
-    } else {
-      document.getElementById('password-error')!.textContent = 'Incorrect password';
+    if (sessionStorage.getItem('change-auth') === 'true') {
+      document.getElementById('password-gate').classList.add('hidden');
+      document.getElementById('protected-content').classList.remove('hidden');
     }
-  }
-</script>
+
+    document.getElementById('password-submit').addEventListener('click', checkPassword);
+    document.getElementById('password-input').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    function checkPassword() {
+      const input = document.getElementById('password-input');
+      if (input.value === PASSWORD) {
+        sessionStorage.setItem('change-auth', 'true');
+        document.getElementById('password-gate').classList.add('hidden');
+        document.getElementById('protected-content').classList.remove('hidden');
+      } else {
+        document.getElementById('password-error').textContent = 'Incorrect password';
+      }
+    }
+  </script>
+</body>
+</html>
