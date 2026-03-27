@@ -129,7 +129,7 @@
   <script>
     const PASSWORD = 'sdn2026';
 
-    if (sessionStorage.getItem('change-auth') === 'true') {
+    if (sessionStorage.getItem('change-auth-v2') === 'true') {
       document.getElementById('password-gate').classList.add('hidden');
       document.getElementById('protected-content').classList.remove('hidden');
     }
@@ -142,7 +142,7 @@
     function checkPassword() {
       const input = document.getElementById('password-input');
       if (input.value === PASSWORD) {
-        sessionStorage.setItem('change-auth', 'true');
+        sessionStorage.setItem('change-auth-v2', 'true');
         document.getElementById('password-gate').classList.add('hidden');
         document.getElementById('protected-content').classList.remove('hidden');
       } else {
