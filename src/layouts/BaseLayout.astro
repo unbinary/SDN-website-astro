@@ -100,10 +100,97 @@ const organizationSchema = {
   )}
 </head>
 <body>
-  <Nav />
-  <main>
-    <slot />
-  </main>
-  <Footer />
+  <div id="password-gate" class="password-gate">
+    <div class="password-box">
+      <h2>Password required</h2>
+      <input type="password" id="password-input" placeholder="Enter password" autofocus>
+      <button id="password-submit">Submit</button>
+      <p id="password-error" class="error"></p>
+    </div>
+  </div>
+
+  <div id="site-content" class="hidden">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </div>
+
+  <script is:inline>
+    const PASSWORD = 'sdn2026';
+
+    if (sessionStorage.getItem('site-auth') === 'true') {
+      document.getElementById('password-gate').classList.add('hidden');
+      document.getElementById('site-content').classList.remove('hidden');
+    }
+
+    document.getElementById('password-submit').addEventListener('click', checkPassword);
+    document.getElementById('password-input').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    function checkPassword() {
+      const input = document.getElementById('password-input');
+      if (input.value === PASSWORD) {
+        sessionStorage.setItem('site-auth', 'true');
+        document.getElementById('password-gate').classList.add('hidden');
+        document.getElementById('site-content').classList.remove('hidden');
+      } else {
+        document.getElementById('password-error').textContent = 'Incorrect password';
+      }
+    }
+  </script>
+
+  <style is:global>
+    .password-gate {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+    }
+    .password-box {
+      background: #fff;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    .password-box h2 {
+      margin-bottom: 1.5rem;
+      color: #1a1a2e;
+    }
+    .password-box input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #e9ecef;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .password-box button {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .password-box button:hover {
+      background: #0052a3;
+    }
+    .password-box .error {
+      color: red;
+      margin-top: 1rem;
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
 </body>
 </html>
